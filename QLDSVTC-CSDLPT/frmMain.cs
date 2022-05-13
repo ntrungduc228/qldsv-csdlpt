@@ -55,6 +55,16 @@ namespace QLDSVTC_CSDLPT
 
         }
 
-       
+        private void LopHocbarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmLopHoc));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmLopHoc f = new frmLopHoc();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
     }
 }

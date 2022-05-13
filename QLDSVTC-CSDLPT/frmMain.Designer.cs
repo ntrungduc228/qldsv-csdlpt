@@ -94,6 +94,7 @@ namespace QLDSVTC_CSDLPT
             this.LopHocbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("LopHocbarButton.ImageOptions.Image")));
             this.LopHocbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("LopHocbarButton.ImageOptions.LargeImage")));
             this.LopHocbarButton.Name = "LopHocbarButton";
+            this.LopHocbarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.LopHocbarButton_ItemClick);
             // 
             // MonHocButtonItem
             // 
