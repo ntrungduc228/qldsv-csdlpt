@@ -66,5 +66,17 @@ namespace QLDSVTC_CSDLPT
                 f.Show();
             }
         }
+
+        private void MonHocButtonItem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmMonHoc));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmMonHoc f = new frmMonHoc();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
     }
 }
