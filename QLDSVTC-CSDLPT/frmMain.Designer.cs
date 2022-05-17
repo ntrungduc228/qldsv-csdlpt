@@ -131,6 +131,7 @@ namespace QLDSVTC_CSDLPT
             this.LopTinChibarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("LopTinChibarButton.ImageOptions.Image")));
             this.LopTinChibarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("LopTinChibarButton.ImageOptions.LargeImage")));
             this.LopTinChibarButton.Name = "LopTinChibarButton";
+            this.LopTinChibarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.LopTinChibarButton_ItemClick);
             // 
             // DiemButtonItem
             // 

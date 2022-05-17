@@ -78,5 +78,17 @@ namespace QLDSVTC_CSDLPT
                 f.Show();
             }
         }
+
+        private void LopTinChibarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmLopTinChi));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmLopTinChi f = new frmLopTinChi();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
     }
 }
