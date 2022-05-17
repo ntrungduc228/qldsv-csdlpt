@@ -86,6 +86,9 @@ namespace QLDSVTC_CSDLPT.Properties {
         internal static System.Drawing.Bitmap student {
             get {
                 object obj = ResourceManager.GetObject("student", resourceCulture);
+        internal static System.Drawing.Bitmap monhoc {
+            get {
+                object obj = ResourceManager.GetObject("monhoc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

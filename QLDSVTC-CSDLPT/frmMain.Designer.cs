@@ -123,6 +123,7 @@ namespace QLDSVTC_CSDLPT
             this.MonHocButtonItem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("MonHocButtonItem.ImageOptions.Image")));
             this.MonHocButtonItem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("MonHocButtonItem.ImageOptions.LargeImage")));
             this.MonHocButtonItem.Name = "MonHocButtonItem";
+            this.MonHocButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MonHocButtonItem_ItemClick);
             // 
             // LopTinChibarButton
             // 
@@ -131,6 +132,7 @@ namespace QLDSVTC_CSDLPT
             this.LopTinChibarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("LopTinChibarButton.ImageOptions.Image")));
             this.LopTinChibarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("LopTinChibarButton.ImageOptions.LargeImage")));
             this.LopTinChibarButton.Name = "LopTinChibarButton";
+            this.LopTinChibarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.LopTinChibarButton_ItemClick);
             // 
             // DiemButtonItem
             // 
@@ -180,7 +182,7 @@ namespace QLDSVTC_CSDLPT
             // 
             // BDMHbarButton
             // 
-            this.BDMHbarButton.Caption = "In BDHM";
+            this.BDMHbarButton.Caption = "In BDMH";
             this.BDMHbarButton.Id = 11;
             this.BDMHbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BDMHbarButton.ImageOptions.Image")));
             this.BDMHbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BDMHbarButton.ImageOptions.LargeImage")));
