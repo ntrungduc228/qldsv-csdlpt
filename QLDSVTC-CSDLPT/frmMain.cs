@@ -50,10 +50,7 @@ namespace QLDSVTC_CSDLPT
             }
         }
 
-        private void ribbon_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void LopHocbarButton_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -62,6 +59,19 @@ namespace QLDSVTC_CSDLPT
             else
             {
                 frmLopHoc f = new frmLopHoc();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnSinhVien_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+            Form frm = this.CheckExists(typeof(frmSinhVien));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmSinhVien f = new frmSinhVien();
                 f.MdiParent = this;
                 f.Show();
             }

@@ -41,25 +41,25 @@ namespace QLDSVTC_CSDLPT
             this.DangKibarButton = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonGroup1 = new DevExpress.XtraBars.BarButtonGroup();
             this.InDSLTCbarButton = new DevExpress.XtraBars.BarButtonItem();
-            this.rpQuanTri = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rpBaoCao = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.MAGV = new System.Windows.Forms.ToolStripStatusLabel();
-            this.HOTEN = new System.Windows.Forms.ToolStripStatusLabel();
-            this.NHOM = new System.Windows.Forms.ToolStripStatusLabel();
             this.DSDKbarButton = new DevExpress.XtraBars.BarButtonItem();
             this.BDMHbarButton = new DevExpress.XtraBars.BarButtonItem();
             this.phieuDiembarButton = new DevExpress.XtraBars.BarButtonItem();
             this.DSHPbarButton = new DevExpress.XtraBars.BarButtonItem();
             this.BDTKbarButton = new DevExpress.XtraBars.BarButtonItem();
-            this.rpCauHinh = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnTaoTK = new DevExpress.XtraBars.BarButtonItem();
             this.btnDoiMK = new DevExpress.XtraBars.BarButtonItem();
             this.btnDangXuat = new DevExpress.XtraBars.BarButtonItem();
+            this.rpQuanTri = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpBaoCao = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpCauHinh = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.MAGV = new System.Windows.Forms.ToolStripStatusLabel();
+            this.HOTEN = new System.Windows.Forms.ToolStripStatusLabel();
+            this.NHOM = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -96,7 +96,7 @@ namespace QLDSVTC_CSDLPT
             this.rpBaoCao,
             this.rpCauHinh});
             this.ribbon.Size = new System.Drawing.Size(966, 209);
-            this.ribbon.Click += new System.EventHandler(this.ribbon_Click);
+           
             // 
             // btnSinhVien
             // 
@@ -105,6 +105,7 @@ namespace QLDSVTC_CSDLPT
             this.btnSinhVien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSinhVien.ImageOptions.Image")));
             this.btnSinhVien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSinhVien.ImageOptions.LargeImage")));
             this.btnSinhVien.Name = "btnSinhVien";
+            this.btnSinhVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSinhVien_ItemClick);
             // 
             // LopHocbarButton
             // 
@@ -165,9 +166,73 @@ namespace QLDSVTC_CSDLPT
             // 
             this.InDSLTCbarButton.Caption = "In DSLTC";
             this.InDSLTCbarButton.Id = 9;
-            this.InDSLTCbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.InDSLTCbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.InDSLTCbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("InDSLTCbarButton.ImageOptions.Image")));
+            this.InDSLTCbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("InDSLTCbarButton.ImageOptions.LargeImage")));
             this.InDSLTCbarButton.Name = "InDSLTCbarButton";
+            // 
+            // DSDKbarButton
+            // 
+            this.DSDKbarButton.Caption = "In DSSV  ĐKLTC";
+            this.DSDKbarButton.Id = 10;
+            this.DSDKbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("DSDKbarButton.ImageOptions.Image")));
+            this.DSDKbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("DSDKbarButton.ImageOptions.LargeImage")));
+            this.DSDKbarButton.Name = "DSDKbarButton";
+            // 
+            // BDMHbarButton
+            // 
+            this.BDMHbarButton.Caption = "In BDHM";
+            this.BDMHbarButton.Id = 11;
+            this.BDMHbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BDMHbarButton.ImageOptions.Image")));
+            this.BDMHbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BDMHbarButton.ImageOptions.LargeImage")));
+            this.BDMHbarButton.Name = "BDMHbarButton";
+            // 
+            // phieuDiembarButton
+            // 
+            this.phieuDiembarButton.Caption = "In Phiếu Điểm SV";
+            this.phieuDiembarButton.Id = 12;
+            this.phieuDiembarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("phieuDiembarButton.ImageOptions.Image")));
+            this.phieuDiembarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("phieuDiembarButton.ImageOptions.LargeImage")));
+            this.phieuDiembarButton.Name = "phieuDiembarButton";
+            // 
+            // DSHPbarButton
+            // 
+            this.DSHPbarButton.Caption = "In Danh Sách HP của Lớp";
+            this.DSHPbarButton.Id = 13;
+            this.DSHPbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("DSHPbarButton.ImageOptions.Image")));
+            this.DSHPbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("DSHPbarButton.ImageOptions.LargeImage")));
+            this.DSHPbarButton.Name = "DSHPbarButton";
+            // 
+            // BDTKbarButton
+            // 
+            this.BDTKbarButton.Caption = "In Bảng điểm TK";
+            this.BDTKbarButton.Id = 14;
+            this.BDTKbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BDTKbarButton.ImageOptions.Image")));
+            this.BDTKbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BDTKbarButton.ImageOptions.LargeImage")));
+            this.BDTKbarButton.Name = "BDTKbarButton";
+            // 
+            // btnTaoTK
+            // 
+            this.btnTaoTK.Caption = "Tạo tài khoản";
+            this.btnTaoTK.Id = 15;
+            this.btnTaoTK.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTaoTK.ImageOptions.Image")));
+            this.btnTaoTK.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTaoTK.ImageOptions.LargeImage")));
+            this.btnTaoTK.Name = "btnTaoTK";
+            // 
+            // btnDoiMK
+            // 
+            this.btnDoiMK.Caption = "Đổi mật khẩu";
+            this.btnDoiMK.Id = 16;
+            this.btnDoiMK.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDoiMK.ImageOptions.Image")));
+            this.btnDoiMK.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDoiMK.ImageOptions.LargeImage")));
+            this.btnDoiMK.Name = "btnDoiMK";
+            // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.Caption = "Đăng xuất";
+            this.btnDangXuat.Id = 17;
+            this.btnDangXuat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.ImageOptions.Image")));
+            this.btnDangXuat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.ImageOptions.LargeImage")));
+            this.btnDangXuat.Name = "btnDangXuat";
             // 
             // rpQuanTri
             // 
@@ -207,6 +272,22 @@ namespace QLDSVTC_CSDLPT
             this.ribbonPageGroup2.ItemLinks.Add(this.BDTKbarButton);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
+            // rpCauHinh
+            // 
+            this.rpCauHinh.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup3});
+            this.rpCauHinh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rpCauHinh.ImageOptions.Image")));
+            this.rpCauHinh.Name = "rpCauHinh";
+            this.rpCauHinh.Text = "CẤU HÌNH";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnTaoTK);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnDoiMK);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnDangXuat);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "Chức năng";
+            // 
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
@@ -241,86 +322,6 @@ namespace QLDSVTC_CSDLPT
             this.NHOM.Name = "NHOM";
             this.NHOM.Size = new System.Drawing.Size(55, 20);
             this.NHOM.Text = "NHOM";
-            // 
-            // DSDKbarButton
-            // 
-            this.DSDKbarButton.Caption = "In DSSV  ĐKLTC";
-            this.DSDKbarButton.Id = 10;
-            this.DSDKbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.DSDKbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
-            this.DSDKbarButton.Name = "DSDKbarButton";
-            // 
-            // BDMHbarButton
-            // 
-            this.BDMHbarButton.Caption = "In BDHM";
-            this.BDMHbarButton.Id = 11;
-            this.BDMHbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.BDMHbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
-            this.BDMHbarButton.Name = "BDMHbarButton";
-            // 
-            // phieuDiembarButton
-            // 
-            this.phieuDiembarButton.Caption = "In Phiếu Điểm SV";
-            this.phieuDiembarButton.Id = 12;
-            this.phieuDiembarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
-            this.phieuDiembarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
-            this.phieuDiembarButton.Name = "phieuDiembarButton";
-            // 
-            // DSHPbarButton
-            // 
-            this.DSHPbarButton.Caption = "In Danh Sách HP của Lớp";
-            this.DSHPbarButton.Id = 13;
-            this.DSHPbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image1")));
-            this.DSHPbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage1")));
-            this.DSHPbarButton.Name = "DSHPbarButton";
-            // 
-            // BDTKbarButton
-            // 
-            this.BDTKbarButton.Caption = "In Bảng điểm TK";
-            this.BDTKbarButton.Id = 14;
-            this.BDTKbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BDTKbarButton.ImageOptions.Image")));
-            this.BDTKbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BDTKbarButton.ImageOptions.LargeImage")));
-            this.BDTKbarButton.Name = "BDTKbarButton";
-            // 
-            // rpCauHinh
-            // 
-            this.rpCauHinh.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup3});
-            this.rpCauHinh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rpCauHinh.ImageOptions.Image")));
-            this.rpCauHinh.Name = "rpCauHinh";
-            this.rpCauHinh.Text = "CẤU HÌNH";
-            // 
-            // ribbonPageGroup3
-            // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnTaoTK);
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnDoiMK);
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnDangXuat);
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "Chức năng";
-            // 
-            // btnTaoTK
-            // 
-            this.btnTaoTK.Caption = "Tạo tài khoản";
-            this.btnTaoTK.Id = 15;
-            this.btnTaoTK.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTaoTK.ImageOptions.Image")));
-            this.btnTaoTK.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTaoTK.ImageOptions.LargeImage")));
-            this.btnTaoTK.Name = "btnTaoTK";
-            // 
-            // btnDoiMK
-            // 
-            this.btnDoiMK.Caption = "Đổi mật khẩu";
-            this.btnDoiMK.Id = 16;
-            this.btnDoiMK.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image2")));
-            this.btnDoiMK.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage2")));
-            this.btnDoiMK.Name = "btnDoiMK";
-            // 
-            // btnDangXuat
-            // 
-            this.btnDangXuat.Caption = "Đăng xuất";
-            this.btnDangXuat.Id = 17;
-            this.btnDangXuat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.ImageOptions.Image")));
-            this.btnDangXuat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.ImageOptions.LargeImage")));
-            this.btnDangXuat.Name = "btnDangXuat";
             // 
             // frmMain
             // 
