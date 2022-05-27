@@ -118,6 +118,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDSV_TC.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Xrpt_BDHM.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Xrpt_BDHM.Designer.cs">
+      <DependentUpon>Xrpt_BDHM.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +153,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Xrpt_BDHM.resx">
+      <DependentUpon>Xrpt_BDHM.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

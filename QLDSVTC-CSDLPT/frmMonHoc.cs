@@ -163,7 +163,7 @@ namespace QLDSVTC_CSDLPT
             flagOption = "ADD";
             panelControl1.Enabled = true;
             bdsMonHoc.AddNew();
-
+            txbMaMonHoc.Enabled = true;
             btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = false;
             btnGhi.Enabled = btnPhucHoi.Enabled = true;
             MonHocGridControl.Enabled = false;
