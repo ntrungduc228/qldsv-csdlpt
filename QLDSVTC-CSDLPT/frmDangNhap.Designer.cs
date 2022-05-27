@@ -117,8 +117,7 @@ namespace QLDSVTC_CSDLPT
             // txbMatKhau
             // 
             this.txbMatKhau.EditValue = "123";
-            this.txbMatKhau.Location = new System.Drawing.Point(144, 171);
-            this.txbMatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbMatKhau.Location = new System.Drawing.Point(144, 138);
             this.txbMatKhau.Name = "txbMatKhau";
             this.txbMatKhau.Properties.UseSystemPasswordChar = true;
             this.txbMatKhau.Size = new System.Drawing.Size(284, 22);

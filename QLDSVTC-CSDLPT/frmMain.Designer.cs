@@ -96,7 +96,6 @@ namespace QLDSVTC_CSDLPT
             this.rpBaoCao,
             this.rpCauHinh});
             this.ribbon.Size = new System.Drawing.Size(966, 209);
-            this.ribbon.Click += new System.EventHandler(this.ribbon_Click);
             // 
             // btnSinhVien
             // 
@@ -105,6 +104,7 @@ namespace QLDSVTC_CSDLPT
             this.btnSinhVien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSinhVien.ImageOptions.Image")));
             this.btnSinhVien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSinhVien.ImageOptions.LargeImage")));
             this.btnSinhVien.Name = "btnSinhVien";
+            this.btnSinhVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSinhVien_ItemClick);
             // 
             // LopHocbarButton
             // 
@@ -112,7 +112,9 @@ namespace QLDSVTC_CSDLPT
             this.LopHocbarButton.Id = 2;
             this.LopHocbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("LopHocbarButton.ImageOptions.Image")));
             this.LopHocbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("LopHocbarButton.ImageOptions.LargeImage")));
-            this.LopHocbarButton.Name = "LopHocbarButton";            // 
+            this.LopHocbarButton.Name = "LopHocbarButton";
+            this.LopHocbarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.LopHocbarButton_ItemClick);
+            // 
             // MonHocButtonItem
             // 
             this.MonHocButtonItem.Caption = "MÔN HỌC";
