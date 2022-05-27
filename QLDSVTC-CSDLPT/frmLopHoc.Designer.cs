@@ -53,8 +53,8 @@ namespace QLDSVTC_CSDLPT
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.cbKhoa = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMaLop = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -274,37 +274,42 @@ namespace QLDSVTC_CSDLPT
             // 
             this.cbKhoa.Controls.Add(this.comboBox1);
             this.cbKhoa.Controls.Add(this.labelControl1);
-            this.cbKhoa.Location = new System.Drawing.Point(0, 57);
+            this.cbKhoa.Location = new System.Drawing.Point(0, 71);
+            this.cbKhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbKhoa.Name = "cbKhoa";
-            this.cbKhoa.Size = new System.Drawing.Size(836, 65);
+            this.cbKhoa.Size = new System.Drawing.Size(1045, 81);
             this.cbKhoa.TabIndex = 5;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(464, 24);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(210, 24);
+            this.comboBox1.TabIndex = 1;
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.labelControl1.Location = new System.Drawing.Point(306, 19);
+            this.labelControl1.Location = new System.Drawing.Point(382, 24);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(59, 23);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "KHOA";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(371, 19);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(169, 24);
-            this.comboBox1.TabIndex = 1;
-            // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(-2, 128);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridControl1.Location = new System.Drawing.Point(-2, 160);
             this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(838, 211);
+            this.gridControl1.Size = new System.Drawing.Size(1048, 264);
             this.gridControl1.TabIndex = 6;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -317,44 +322,45 @@ namespace QLDSVTC_CSDLPT
             this.colTenLop,
             this.colKhoaHoc,
             this.colMaKhoa});
+            this.gridView1.DetailHeight = 437;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
             // colMaLop
             // 
             this.colMaLop.Caption = "Mã Lớp";
-            this.colMaLop.MinWidth = 25;
+            this.colMaLop.MinWidth = 31;
             this.colMaLop.Name = "colMaLop";
             this.colMaLop.Visible = true;
             this.colMaLop.VisibleIndex = 0;
-            this.colMaLop.Width = 94;
+            this.colMaLop.Width = 117;
             // 
             // colTenLop
             // 
             this.colTenLop.Caption = "Tên Lớp";
-            this.colTenLop.MinWidth = 25;
+            this.colTenLop.MinWidth = 31;
             this.colTenLop.Name = "colTenLop";
             this.colTenLop.Visible = true;
             this.colTenLop.VisibleIndex = 1;
-            this.colTenLop.Width = 94;
+            this.colTenLop.Width = 117;
             // 
             // colKhoaHoc
             // 
             this.colKhoaHoc.Caption = "Khóa Học";
-            this.colKhoaHoc.MinWidth = 25;
+            this.colKhoaHoc.MinWidth = 31;
             this.colKhoaHoc.Name = "colKhoaHoc";
             this.colKhoaHoc.Visible = true;
             this.colKhoaHoc.VisibleIndex = 2;
-            this.colKhoaHoc.Width = 94;
+            this.colKhoaHoc.Width = 117;
             // 
             // colMaKhoa
             // 
             this.colMaKhoa.Caption = "Mã Khoa";
-            this.colMaKhoa.MinWidth = 25;
+            this.colMaKhoa.MinWidth = 31;
             this.colMaKhoa.Name = "colMaKhoa";
             this.colMaKhoa.Visible = true;
             this.colMaKhoa.VisibleIndex = 3;
-            this.colMaKhoa.Width = 94;
+            this.colMaKhoa.Width = 117;
             // 
             // frmLopHoc
             // 

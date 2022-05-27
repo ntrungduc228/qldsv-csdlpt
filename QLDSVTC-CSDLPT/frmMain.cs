@@ -55,18 +55,6 @@ namespace QLDSVTC_CSDLPT
 
         }
 
-        private void LopHocbarButton_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            Form frm = this.CheckExists(typeof(frmLopHoc));
-            if (frm != null) frm.Activate();
-            else
-            {
-                frmLopHoc f = new frmLopHoc();
-                f.MdiParent = this;
-                f.Show();
-            }
-        }
-
         private void MonHocButtonItem_ItemClick(object sender, ItemClickEventArgs e)
         {
             Form frm = this.CheckExists(typeof(frmMonHoc));
@@ -78,5 +66,30 @@ namespace QLDSVTC_CSDLPT
                 f.Show();
             }
         }
+
+        private void LopTinChibarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmLopTinChi));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmLopTinChi f = new frmLopTinChi();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void DiemButtonItem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmDiem));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmDiem f = new frmDiem();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
     }
 }

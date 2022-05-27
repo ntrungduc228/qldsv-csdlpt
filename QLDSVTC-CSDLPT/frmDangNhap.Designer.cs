@@ -45,7 +45,8 @@ namespace QLDSVTC_CSDLPT
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(51, 141);
+            this.labelControl3.Location = new System.Drawing.Point(64, 176);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(56, 17);
             this.labelControl3.TabIndex = 2;
@@ -53,7 +54,8 @@ namespace QLDSVTC_CSDLPT
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(51, 101);
+            this.labelControl2.Location = new System.Drawing.Point(64, 126);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(59, 17);
             this.labelControl2.TabIndex = 3;
@@ -61,7 +63,8 @@ namespace QLDSVTC_CSDLPT
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(51, 61);
+            this.labelControl4.Location = new System.Drawing.Point(64, 76);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(58, 16);
             this.labelControl4.TabIndex = 4;
@@ -70,7 +73,7 @@ namespace QLDSVTC_CSDLPT
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(144, 173);
+            this.checkBox1.Location = new System.Drawing.Point(144, 209);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(85, 21);
             this.checkBox1.TabIndex = 12;
@@ -91,9 +94,10 @@ namespace QLDSVTC_CSDLPT
             // 
             this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(271, 204);
+            this.btnThoat.Location = new System.Drawing.Point(298, 252);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(140, 44);
+            this.btnThoat.Size = new System.Drawing.Size(130, 49);
             this.btnThoat.TabIndex = 11;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
@@ -102,7 +106,8 @@ namespace QLDSVTC_CSDLPT
             // 
             this.btnDangNhap.AutoSize = true;
             this.btnDangNhap.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDangNhap.ImageOptions.SvgImage")));
-            this.btnDangNhap.Location = new System.Drawing.Point(110, 204);
+            this.btnDangNhap.Location = new System.Drawing.Point(111, 255);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(118, 44);
             this.btnDangNhap.TabIndex = 10;
@@ -111,8 +116,9 @@ namespace QLDSVTC_CSDLPT
             // 
             // txbMatKhau
             // 
-            this.txbMatKhau.EditValue = "123456";
-            this.txbMatKhau.Location = new System.Drawing.Point(144, 138);
+            this.txbMatKhau.EditValue = "123";
+            this.txbMatKhau.Location = new System.Drawing.Point(144, 171);
+            this.txbMatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbMatKhau.Name = "txbMatKhau";
             this.txbMatKhau.Properties.UseSystemPasswordChar = true;
             this.txbMatKhau.Size = new System.Drawing.Size(284, 22);
@@ -120,8 +126,9 @@ namespace QLDSVTC_CSDLPT
             // 
             // txbTaiKhoan
             // 
-            this.txbTaiKhoan.EditValue = "GV01";
-            this.txbTaiKhoan.Location = new System.Drawing.Point(144, 98);
+            this.txbTaiKhoan.EditValue = "thu";
+            this.txbTaiKhoan.Location = new System.Drawing.Point(144, 121);
+            this.txbTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbTaiKhoan.Name = "txbTaiKhoan";
             this.txbTaiKhoan.Size = new System.Drawing.Size(284, 22);
             this.txbTaiKhoan.TabIndex = 8;
@@ -130,7 +137,7 @@ namespace QLDSVTC_CSDLPT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(510, 271);
+            this.ClientSize = new System.Drawing.Size(522, 362);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.cbChiNhanh);
             this.Controls.Add(this.btnThoat);
