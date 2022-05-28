@@ -350,7 +350,8 @@ namespace QLDSVTC_CSDLPT
             // 
             this.cbKhoa.Controls.Add(this.cobKhoa);
             this.cbKhoa.Controls.Add(this.labelControl1);
-            this.cbKhoa.Location = new System.Drawing.Point(0, 57);
+            this.cbKhoa.Location = new System.Drawing.Point(0, 71);
+            this.cbKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.cbKhoa.Name = "cbKhoa";
             this.cbKhoa.Size = new System.Drawing.Size(1364, 65);
             this.cbKhoa.TabIndex = 5;

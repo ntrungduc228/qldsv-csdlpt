@@ -83,6 +83,16 @@ namespace QLDSVTC_CSDLPT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap monhoc {
+            get {
+                object obj = ResourceManager.GetObject("monhoc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap student {
             get {
                 object obj = ResourceManager.GetObject("student", resourceCulture);
