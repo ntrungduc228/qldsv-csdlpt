@@ -108,14 +108,26 @@
     <Compile Include="frmSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
-	  <Compile Include="frmSinhVien.Designer.cs">
-		  <DependentUpon>frmSinhVien.cs</DependentUpon>
-	  </Compile>
+    <Compile Include="frmSinhVien.Designer.cs">
+      <DependentUpon>frmSinhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMonHoc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMonHoc.Designer.cs">
       <DependentUpon>frmMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frpt_BDHM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frpt_BDHM.Designer.cs">
+      <DependentUpon>Frpt_BDHM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frpt_PhieuDiem_SV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frpt_PhieuDiem_SV.Designer.cs">
+      <DependentUpon>Frpt_PhieuDiem_SV.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -129,6 +141,12 @@
     </Compile>
     <Compile Include="Xrpt_BDHM.Designer.cs">
       <DependentUpon>Xrpt_BDHM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xrpt_PhieuDiem_SV.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Xrpt_PhieuDiem_SV.Designer.cs">
+      <DependentUpon>Xrpt_PhieuDiem_SV.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
@@ -145,11 +163,17 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-	  <EmbeddedResource Include="frmSinhVien.resx">
-		  <DependentUpon>frmSinhVien.cs</DependentUpon>
-	  </EmbeddedResource>
+    <EmbeddedResource Include="frmSinhVien.resx">
+      <DependentUpon>frmSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMonHoc.resx">
       <DependentUpon>frmMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frpt_BDHM.resx">
+      <DependentUpon>Frpt_BDHM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frpt_PhieuDiem_SV.resx">
+      <DependentUpon>Frpt_PhieuDiem_SV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -164,6 +188,9 @@
     </Compile>
     <EmbeddedResource Include="Xrpt_BDHM.resx">
       <DependentUpon>Xrpt_BDHM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xrpt_PhieuDiem_SV.resx">
+      <DependentUpon>Xrpt_PhieuDiem_SV.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">

@@ -184,9 +184,10 @@ namespace QLDSVTC_CSDLPT
             // 
             this.BDHMbarButton.Caption = "In BDHM";
             this.BDHMbarButton.Id = 11;
-            this.BDHMbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BDMHbarButton.ImageOptions.Image")));
-            this.BDHMbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BDMHbarButton.ImageOptions.LargeImage")));
+            this.BDHMbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BDHMbarButton.ImageOptions.Image")));
+            this.BDHMbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BDHMbarButton.ImageOptions.LargeImage")));
             this.BDHMbarButton.Name = "BDHMbarButton";
+            this.BDHMbarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BDHMbarButton_ItemClick);
             // 
             // phieuDiembarButton
             // 
@@ -195,6 +196,7 @@ namespace QLDSVTC_CSDLPT
             this.phieuDiembarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("phieuDiembarButton.ImageOptions.Image")));
             this.phieuDiembarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("phieuDiembarButton.ImageOptions.LargeImage")));
             this.phieuDiembarButton.Name = "phieuDiembarButton";
+            this.phieuDiembarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.phieuDiembarButton_ItemClick);
             // 
             // DSHPbarButton
             // 
