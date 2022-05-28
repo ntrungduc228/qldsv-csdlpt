@@ -106,12 +106,12 @@ namespace QLDSVTC_CSDLPT
             // 
             // DetailCaption1
             // 
-            this.DetailCaption1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DetailCaption1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(159)))), ((int)(((byte)(228)))));
             this.DetailCaption1.BorderColor = System.Drawing.Color.White;
             this.DetailCaption1.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.DetailCaption1.BorderWidth = 2F;
             this.DetailCaption1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.DetailCaption1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            this.DetailCaption1.ForeColor = System.Drawing.Color.White;
             this.DetailCaption1.Name = "DetailCaption1";
             this.DetailCaption1.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 6, 0, 0, 100F);
             this.DetailCaption1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
@@ -155,6 +155,7 @@ namespace QLDSVTC_CSDLPT
             this.BottomMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.pageInfo1,
             this.pageInfo2});
+            this.BottomMargin.HeightF = 245.3333F;
             this.BottomMargin.Name = "BottomMargin";
             // 
             // ReportHeader
@@ -202,7 +203,7 @@ namespace QLDSVTC_CSDLPT
             this.label1.Name = "label1";
             this.label1.SizeF = new System.Drawing.SizeF(617F, 24.19433F);
             this.label1.StyleName = "Title";
-            this.label1.Text = "sdfgshgh";
+            this.label1.Text = "BẢNG ĐIỂM HẾT MÔN";
             // 
             // table1
             // 
@@ -334,7 +335,7 @@ namespace QLDSVTC_CSDLPT
             this.tableCell10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.tableCell10.Weight = 0.21583335669607257D;
             // 
-            // Xrpt_BDHM
+            // XtraReport11
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.TopMargin,
@@ -347,6 +348,7 @@ namespace QLDSVTC_CSDLPT
             this.DataMember = "SP_LAY_DSSV_DANGKY";
             this.DataSource = this.sqlDataSource1;
             this.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.Margins = new System.Drawing.Printing.Margins(100, 100, 100, 245);
             this.PageHeight = 1169;
             this.PageWidth = 827;
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;

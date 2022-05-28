@@ -42,7 +42,7 @@ namespace QLDSVTC_CSDLPT
             this.barButtonGroup1 = new DevExpress.XtraBars.BarButtonGroup();
             this.InDSLTCbarButton = new DevExpress.XtraBars.BarButtonItem();
             this.DSDKbarButton = new DevExpress.XtraBars.BarButtonItem();
-            this.BDMHbarButton = new DevExpress.XtraBars.BarButtonItem();
+            this.BDHMbarButton = new DevExpress.XtraBars.BarButtonItem();
             this.phieuDiembarButton = new DevExpress.XtraBars.BarButtonItem();
             this.DSHPbarButton = new DevExpress.XtraBars.BarButtonItem();
             this.BDTKbarButton = new DevExpress.XtraBars.BarButtonItem();
@@ -81,7 +81,7 @@ namespace QLDSVTC_CSDLPT
             this.barButtonGroup1,
             this.InDSLTCbarButton,
             this.DSDKbarButton,
-            this.BDMHbarButton,
+            this.BDHMbarButton,
             this.phieuDiembarButton,
             this.DSHPbarButton,
             this.BDTKbarButton,
@@ -180,13 +180,13 @@ namespace QLDSVTC_CSDLPT
             this.DSDKbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("DSDKbarButton.ImageOptions.LargeImage")));
             this.DSDKbarButton.Name = "DSDKbarButton";
             // 
-            // BDMHbarButton
+            // BDHMbarButton
             // 
-            this.BDMHbarButton.Caption = "In BDMH";
-            this.BDMHbarButton.Id = 11;
-            this.BDMHbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BDMHbarButton.ImageOptions.Image")));
-            this.BDMHbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BDMHbarButton.ImageOptions.LargeImage")));
-            this.BDMHbarButton.Name = "BDMHbarButton";
+            this.BDHMbarButton.Caption = "In BDHM";
+            this.BDHMbarButton.Id = 11;
+            this.BDHMbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BDMHbarButton.ImageOptions.Image")));
+            this.BDHMbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BDMHbarButton.ImageOptions.LargeImage")));
+            this.BDHMbarButton.Name = "BDHMbarButton";
             // 
             // phieuDiembarButton
             // 
@@ -268,7 +268,7 @@ namespace QLDSVTC_CSDLPT
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.InDSLTCbarButton);
             this.ribbonPageGroup2.ItemLinks.Add(this.DSDKbarButton);
-            this.ribbonPageGroup2.ItemLinks.Add(this.BDMHbarButton);
+            this.ribbonPageGroup2.ItemLinks.Add(this.BDHMbarButton);
             this.ribbonPageGroup2.ItemLinks.Add(this.phieuDiembarButton);
             this.ribbonPageGroup2.ItemLinks.Add(this.DSHPbarButton);
             this.ribbonPageGroup2.ItemLinks.Add(this.BDTKbarButton);
@@ -368,7 +368,7 @@ namespace QLDSVTC_CSDLPT
         private System.Windows.Forms.ToolStripStatusLabel NHOM;
         private DevExpress.XtraBars.BarButtonItem InDSLTCbarButton;
         private DevExpress.XtraBars.BarButtonItem DSDKbarButton;
-        private DevExpress.XtraBars.BarButtonItem BDMHbarButton;
+        private DevExpress.XtraBars.BarButtonItem BDHMbarButton;
         private DevExpress.XtraBars.BarButtonItem phieuDiembarButton;
         private DevExpress.XtraBars.BarButtonItem DSHPbarButton;
         private DevExpress.XtraBars.BarButtonItem BDTKbarButton;
