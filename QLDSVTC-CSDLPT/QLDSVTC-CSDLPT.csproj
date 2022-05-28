@@ -57,6 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="formDSLTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDSLTC.Designer.cs">
+      <DependentUpon>formDSLTC.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDSV_TC.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="formDSLTC.resx">
+      <DependentUpon>formDSLTC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
