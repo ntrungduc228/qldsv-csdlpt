@@ -68,22 +68,34 @@ namespace QLDSVTC_CSDLPT
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if(isSinhVien == true)
+            if (isSinhVien == false)
+            {
+                if (txbTaiKhoan.Text.Trim() == "" || txbMatKhau.Text.Trim() == "")
+                {
+                    MessageBox.Show("Login name và mật khẩu không được trống", "", MessageBoxButtons.OK);
+                    return;
+                }
+            }
+            else
+            {
+                if (txbTaiKhoan.Text.Trim() == "")
+                {
+                    MessageBox.Show("Login name không được trống", "", MessageBoxButtons.OK);
+                    return;
+                }
+            }
+            if (isSinhVien == true)
             {
                 Program.mLogin = "SVKN";
                 Program.mPassword = "123456";
                 if (Program.KetNoi() == 0) return;
             }
-
-            if (txbTaiKhoan.Text.Trim() == "" || txbMatKhau.Text.Trim() == "")
+            else
             {
-                MessageBox.Show("Login name và mật khẩu không được trống", "", MessageBoxButtons.OK);
-                return;
+                Program.mLogin = txbTaiKhoan.Text; Program.mPassword = txbMatKhau.Text;
+                if (Program.KetNoi() == 0) return;
             }
 
-            Program.mLogin = txbTaiKhoan.Text; Program.mPassword = txbMatKhau.Text;
-           
-            if (Program.KetNoi() == 0) return;
 
             
 
@@ -95,11 +107,43 @@ namespace QLDSVTC_CSDLPT
             Program.mGroup = Program.myReader.GetString(2);
             Program.username = Program.myReader.GetString(0);
             Program.mHoten = Program.myReader.GetString(1);
-            Program.myReader.Close();
 
+            if (isSinhVien == false)
+            {
+                Program.mHoten = Program.myReader.GetString(1);
+                Program.username = Program.myReader.GetString(0);
+            }
+
+            Program.myReader.Close();
+            string strlenh1 = "EXEC [dbo].[SP_LayThongTinSV_DangNhap] '" + txbTaiKhoan.Text + "', '" + txbMatKhau.Text + "'";
+            SqlDataReader reader = Program.ExecSqlDataReader(strlenh1);
+
+            if (reader.HasRows == false && isSinhVien == true)
+            {
+                MessageBox.Show("Đăng nhập thất bại! \nMã sinh viên không tồn tại");
+                return;
+            }
+
+            reader.Read();
+
+            if (Convert.IsDBNull(Program.username))
+            {
+                MessageBox.Show("Login bạn nhập không có quyền truy cập dữ liệu\n Bạn xem lại username, password", "", MessageBoxButtons.OK);
+                return;
+            }
+
+            if (isSinhVien == true)
+            {
+                try
+                {
+                    Program.mHoten = reader.GetString(1);
+                    Program.username = reader.GetString(0);
+                }
+                catch (Exception) { }
+            }
             Program.conn.Close();
-           
-           // MessageBox.Show("Đăng nhập thành công !!!");
+            reader.Close();
+            // MessageBox.Show("Đăng nhập thành công !!!");
             //Form f = new frmMain();
             //f.ShowDialog();
             // truy cập vào frm main 

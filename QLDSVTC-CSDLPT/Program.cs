@@ -27,6 +27,8 @@ namespace QLDSVTC_CSDLPT
         public static String username = "";
         public static String password = "";
         public static String database = "QLDSV_TC";
+        public static String remotelogin = "HTKN";
+        public static String remotepassword = "123456";
         public static String mLogin = "";
         public static String mPassword = "";
         public static String mGroup =  "";
