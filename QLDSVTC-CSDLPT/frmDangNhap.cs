@@ -15,6 +15,7 @@ namespace QLDSVTC_CSDLPT
     public partial class frmDangNhap : DevExpress.XtraEditors.XtraForm
     {
         private SqlConnection conn_publisher = new SqlConnection();
+        private bool isSinhVien = false;
         public frmDangNhap()
         {
             InitializeComponent();
@@ -67,7 +68,14 @@ namespace QLDSVTC_CSDLPT
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if(txbTaiKhoan.Text.Trim() == "" || txbMatKhau.Text.Trim() == "")
+            if(isSinhVien == true)
+            {
+                Program.mLogin = "SVKN";
+                Program.mPassword = "123456";
+                if (Program.KetNoi() == 0) return;
+            }
+
+            if (txbTaiKhoan.Text.Trim() == "" || txbMatKhau.Text.Trim() == "")
             {
                 MessageBox.Show("Login name và mật khẩu không được trống", "", MessageBoxButtons.OK);
                 return;
@@ -91,7 +99,7 @@ namespace QLDSVTC_CSDLPT
 
             Program.conn.Close();
            
-            MessageBox.Show("Đăng nhập thành công !!!");
+           // MessageBox.Show("Đăng nhập thành công !!!");
             //Form f = new frmMain();
             //f.ShowDialog();
             // truy cập vào frm main 
@@ -111,6 +119,11 @@ namespace QLDSVTC_CSDLPT
                 Program.servername = cbChiNhanh.SelectedValue.ToString();
             }
             catch (Exception) { }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            isSinhVien = !isSinhVien;
         }
     }
 }

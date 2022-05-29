@@ -43,7 +43,18 @@ namespace QLDSVTC_CSDLPT
 
         void PhanQuyen()
         {
-            
+            if (Program.mGroup.Equals("SV"))
+            {
+                DangKibarButton.Enabled = true;
+                DiemButtonItem.Enabled = HocPhibarButton.Enabled = LopHocbarButton.Enabled = LopTinChibarButton.Enabled = MonHocButtonItem.Enabled = btnSinhVien.Enabled = btnTaoTK.Enabled = false;
+                rpBaoCao.Visible = false;
+            }
+            if (Program.mGroup.Equals("PKT"))
+            {
+                HocPhibarButton.Enabled = true;
+                DiemButtonItem.Enabled = LopHocbarButton.Enabled = LopTinChibarButton.Enabled = MonHocButtonItem.Enabled = btnSinhVien.Enabled = DangKibarButton.Enabled = false;
+                rpBaoCao.Visible = false;
+            }
             if (Program.mGroup.Equals("PGV") || Program.mGroup.Equals("KHOA"))
             {
                 DangKibarButton.Enabled = HocPhibarButton.Enabled = false;
@@ -65,6 +76,29 @@ namespace QLDSVTC_CSDLPT
                 f.MdiParent = this;
                 f.Show();
             }
+        }
+
+        private void HocPhibarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmHocPhi));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmHocPhi f = new frmHocPhi();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                f.Close();
+            }
+            Form frmDangNhap = new frmDangNhap();
+
+            this.Close();
         }
     }
 }

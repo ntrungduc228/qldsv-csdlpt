@@ -43,5 +43,16 @@ namespace QLDSVTC_CSDLPT.Properties {
                 return ((string)(this["QLDSV_TC"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-PN0LV22\\SQLSV3;Initial Catalog=QLDSV_TC;User ID=sa;Password=1" +
+            "23")]
+        public string QLDSV_TCConnectionString1 {
+            get {
+                return ((string)(this["QLDSV_TCConnectionString1"]));
+            }
+        }
     }
 }
