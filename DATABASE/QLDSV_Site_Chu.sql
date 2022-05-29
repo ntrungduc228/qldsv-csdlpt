@@ -17,3 +17,4 @@ CREATE PROC [dbo].[SP_Lay_Thong_Tin_GV_Tu_Login]
 		TENNHOM= name
 		FROM SYS.sysusers
 		WHERE uid = (SELECT groupuid FROM SYS.sysmembers WHERE memberuid = @UID)
+

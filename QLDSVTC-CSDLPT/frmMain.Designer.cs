@@ -42,7 +42,7 @@ namespace QLDSVTC_CSDLPT
             this.barButtonGroup1 = new DevExpress.XtraBars.BarButtonGroup();
             this.InDSLTCbarButton = new DevExpress.XtraBars.BarButtonItem();
             this.DSDKbarButton = new DevExpress.XtraBars.BarButtonItem();
-            this.BDMHbarButton = new DevExpress.XtraBars.BarButtonItem();
+            this.BDHMbarButton = new DevExpress.XtraBars.BarButtonItem();
             this.phieuDiembarButton = new DevExpress.XtraBars.BarButtonItem();
             this.DSHPbarButton = new DevExpress.XtraBars.BarButtonItem();
             this.BDTKbarButton = new DevExpress.XtraBars.BarButtonItem();
@@ -81,7 +81,7 @@ namespace QLDSVTC_CSDLPT
             this.barButtonGroup1,
             this.InDSLTCbarButton,
             this.DSDKbarButton,
-            this.BDMHbarButton,
+            this.BDHMbarButton,
             this.phieuDiembarButton,
             this.DSHPbarButton,
             this.BDTKbarButton,
@@ -96,7 +96,6 @@ namespace QLDSVTC_CSDLPT
             this.rpBaoCao,
             this.rpCauHinh});
             this.ribbon.Size = new System.Drawing.Size(966, 209);
-            this.ribbon.Click += new System.EventHandler(this.ribbon_Click);
             // 
             // btnSinhVien
             // 
@@ -105,6 +104,7 @@ namespace QLDSVTC_CSDLPT
             this.btnSinhVien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSinhVien.ImageOptions.Image")));
             this.btnSinhVien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSinhVien.ImageOptions.LargeImage")));
             this.btnSinhVien.Name = "btnSinhVien";
+            this.btnSinhVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSinhVien_ItemClick);
             // 
             // LopHocbarButton
             // 
@@ -122,6 +122,7 @@ namespace QLDSVTC_CSDLPT
             this.MonHocButtonItem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("MonHocButtonItem.ImageOptions.Image")));
             this.MonHocButtonItem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("MonHocButtonItem.ImageOptions.LargeImage")));
             this.MonHocButtonItem.Name = "MonHocButtonItem";
+            this.MonHocButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MonHocButtonItem_ItemClick);
             // 
             // LopTinChibarButton
             // 
@@ -130,6 +131,7 @@ namespace QLDSVTC_CSDLPT
             this.LopTinChibarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("LopTinChibarButton.ImageOptions.Image")));
             this.LopTinChibarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("LopTinChibarButton.ImageOptions.LargeImage")));
             this.LopTinChibarButton.Name = "LopTinChibarButton";
+            this.LopTinChibarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.LopTinChibarButton_ItemClick);
             // 
             // DiemButtonItem
             // 
@@ -138,6 +140,7 @@ namespace QLDSVTC_CSDLPT
             this.DiemButtonItem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("DiemButtonItem.ImageOptions.Image")));
             this.DiemButtonItem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("DiemButtonItem.ImageOptions.LargeImage")));
             this.DiemButtonItem.Name = "DiemButtonItem";
+            this.DiemButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.DiemButtonItem_ItemClick);
             // 
             // HocPhibarButton
             // 
@@ -178,13 +181,14 @@ namespace QLDSVTC_CSDLPT
             this.DSDKbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("DSDKbarButton.ImageOptions.LargeImage")));
             this.DSDKbarButton.Name = "DSDKbarButton";
             // 
-            // BDMHbarButton
+            // BDHMbarButton
             // 
-            this.BDMHbarButton.Caption = "In BDHM";
-            this.BDMHbarButton.Id = 11;
-            this.BDMHbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BDMHbarButton.ImageOptions.Image")));
-            this.BDMHbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BDMHbarButton.ImageOptions.LargeImage")));
-            this.BDMHbarButton.Name = "BDMHbarButton";
+            this.BDHMbarButton.Caption = "In BDHM";
+            this.BDHMbarButton.Id = 11;
+            this.BDHMbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BDHMbarButton.ImageOptions.Image")));
+            this.BDHMbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BDHMbarButton.ImageOptions.LargeImage")));
+            this.BDHMbarButton.Name = "BDHMbarButton";
+            this.BDHMbarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BDHMbarButton_ItemClick);
             // 
             // phieuDiembarButton
             // 
@@ -193,6 +197,7 @@ namespace QLDSVTC_CSDLPT
             this.phieuDiembarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("phieuDiembarButton.ImageOptions.Image")));
             this.phieuDiembarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("phieuDiembarButton.ImageOptions.LargeImage")));
             this.phieuDiembarButton.Name = "phieuDiembarButton";
+            this.phieuDiembarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.phieuDiembarButton_ItemClick);
             // 
             // DSHPbarButton
             // 
@@ -267,7 +272,7 @@ namespace QLDSVTC_CSDLPT
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.InDSLTCbarButton);
             this.ribbonPageGroup2.ItemLinks.Add(this.DSDKbarButton);
-            this.ribbonPageGroup2.ItemLinks.Add(this.BDMHbarButton);
+            this.ribbonPageGroup2.ItemLinks.Add(this.BDHMbarButton);
             this.ribbonPageGroup2.ItemLinks.Add(this.phieuDiembarButton);
             this.ribbonPageGroup2.ItemLinks.Add(this.DSHPbarButton);
             this.ribbonPageGroup2.ItemLinks.Add(this.BDTKbarButton);
@@ -368,7 +373,7 @@ namespace QLDSVTC_CSDLPT
         private System.Windows.Forms.ToolStripStatusLabel NHOM;
         private DevExpress.XtraBars.BarButtonItem InDSLTCbarButton;
         private DevExpress.XtraBars.BarButtonItem DSDKbarButton;
-        private DevExpress.XtraBars.BarButtonItem BDMHbarButton;
+        private DevExpress.XtraBars.BarButtonItem BDHMbarButton;
         private DevExpress.XtraBars.BarButtonItem phieuDiembarButton;
         private DevExpress.XtraBars.BarButtonItem DSHPbarButton;
         private DevExpress.XtraBars.BarButtonItem BDTKbarButton;

@@ -61,9 +61,54 @@ namespace QLDSVTC_CSDLPT
             }
         }
 
-        private void ribbon_Click(object sender, EventArgs e)
+       
+
+        private void MonHocButtonItem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmMonHoc));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmMonHoc f = new frmMonHoc();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnSinhVien_ItemClick(object sender, ItemClickEventArgs e)
         {
 
+            Form frm = this.CheckExists(typeof(frmSinhVien));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmSinhVien f = new frmSinhVien();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+        private void DiemButtonItem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmDiem));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmDiem f = new frmDiem();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void LopTinChibarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmLopTinChi));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmLopTinChi f = new frmLopTinChi();
+                f.MdiParent = this;
+                f.Show();
+            }
         }
 
         private void LopHocbarButton_ItemClick(object sender, ItemClickEventArgs e)
@@ -85,6 +130,15 @@ namespace QLDSVTC_CSDLPT
             else
             {
                 frmHocPhi f = new frmHocPhi();
+            }
+        }
+        private void BDHMbarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(Frpt_BDHM));
+            if (frm != null) frm.Activate();
+            else
+            {
+                Frpt_BDHM f = new Frpt_BDHM();
                 f.MdiParent = this;
                 f.Show();
             }
@@ -99,6 +153,17 @@ namespace QLDSVTC_CSDLPT
             Form frmDangNhap = new frmDangNhap();
 
             this.Close();
+        }
+        private void phieuDiembarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(Frpt_PhieuDiem_SV));
+            if (frm != null) frm.Activate();
+            else
+            {
+                Frpt_PhieuDiem_SV f = new Frpt_PhieuDiem_SV();
+                f.MdiParent = this;
+                f.Show();
+            }
         }
     }
 }
