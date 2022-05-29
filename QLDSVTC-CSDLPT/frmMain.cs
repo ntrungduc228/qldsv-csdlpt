@@ -161,6 +161,52 @@ namespace QLDSVTC_CSDLPT
             else
             {
                 Frpt_PhieuDiem_SV f = new Frpt_PhieuDiem_SV();
+            }
+        }
+
+        private void DSHPbarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frptHocPhi));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frptHocPhi f = new frptHocPhi();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void BDTKbarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frptBDTK));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frptBDTK f = new frptBDTK();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnTaoTK_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmTaoTaiKhoan));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmTaoTaiKhoan f = new frmTaoTaiKhoan();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void DangKibarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmDangKi));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmDangKi f = new frmDangKi();
                 f.MdiParent = this;
                 f.Show();
             }

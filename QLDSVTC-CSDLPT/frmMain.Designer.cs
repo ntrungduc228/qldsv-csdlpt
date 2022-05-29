@@ -158,6 +158,7 @@ namespace QLDSVTC_CSDLPT
             this.DangKibarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("DangKibarButton.ImageOptions.Image")));
             this.DangKibarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("DangKibarButton.ImageOptions.LargeImage")));
             this.DangKibarButton.Name = "DangKibarButton";
+            this.DangKibarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.DangKibarButton_ItemClick);
             // 
             // barButtonGroup1
             // 
@@ -206,6 +207,7 @@ namespace QLDSVTC_CSDLPT
             this.DSHPbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("DSHPbarButton.ImageOptions.Image")));
             this.DSHPbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("DSHPbarButton.ImageOptions.LargeImage")));
             this.DSHPbarButton.Name = "DSHPbarButton";
+            this.DSHPbarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.DSHPbarButton_ItemClick);
             // 
             // BDTKbarButton
             // 
@@ -214,6 +216,7 @@ namespace QLDSVTC_CSDLPT
             this.BDTKbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BDTKbarButton.ImageOptions.Image")));
             this.BDTKbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BDTKbarButton.ImageOptions.LargeImage")));
             this.BDTKbarButton.Name = "BDTKbarButton";
+            this.BDTKbarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BDTKbarButton_ItemClick);
             // 
             // btnTaoTK
             // 
@@ -222,6 +225,7 @@ namespace QLDSVTC_CSDLPT
             this.btnTaoTK.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTaoTK.ImageOptions.Image")));
             this.btnTaoTK.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTaoTK.ImageOptions.LargeImage")));
             this.btnTaoTK.Name = "btnTaoTK";
+            this.btnTaoTK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTaoTK_ItemClick);
             // 
             // btnDoiMK
             // 
