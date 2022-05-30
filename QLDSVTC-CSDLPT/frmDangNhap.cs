@@ -86,35 +86,33 @@ namespace QLDSVTC_CSDLPT
             }
             if (isSinhVien == true)
             {
-                Program.mLogin = "SVKN";
-                Program.mPassword = "123456";
+                Program.login = "SVKN";
+                Program.password = "123456";
                 if (Program.KetNoi() == 0) return;
             }
             else
             {
-                Program.mLogin = txbTaiKhoan.Text; Program.mPassword = txbMatKhau.Text;
+                Program.login = txbTaiKhoan.Text; Program.password = txbMatKhau.Text;
                 if (Program.KetNoi() == 0) return;
             }
 
-
-            
-
             Program.mKhoa = cbChiNhanh.SelectedIndex;
-            string strLenh = "EXEC dbo.SP_Lay_Thong_Tin_GV_Tu_Login '" + Program.mLogin + "'";
+            Program.mLogin = Program.login;
+            Program.mPassword = Program.password;
+
+            string strLenh = "EXEC dbo.SP_Lay_Thong_Tin_GV_Tu_Login '" + Program.login + "'";
             Program.myReader = Program.ExecSqlDataReader(strLenh);
             if (Program.myReader == null) return;
             Program.myReader.Read(); // Đọc 1 dòng nếu dữ liệu có nhiều dùng thì dùng for lặp nếu null thì break
             Program.mGroup = Program.myReader.GetString(2);
-            Program.username = Program.myReader.GetString(0);
-            Program.mHoten = Program.myReader.GetString(1);
 
             if (isSinhVien == false)
             {
                 Program.mHoten = Program.myReader.GetString(1);
                 Program.username = Program.myReader.GetString(0);
             }
-
             Program.myReader.Close();
+
             string strlenh1 = "EXEC [dbo].[SP_LayThongTinSV_DangNhap] '" + txbTaiKhoan.Text + "', '" + txbMatKhau.Text + "'";
             SqlDataReader reader = Program.ExecSqlDataReader(strlenh1);
 

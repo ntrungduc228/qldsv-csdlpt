@@ -76,8 +76,13 @@ namespace QLDSVTC_CSDLPT
             Program.servername = cbKhoa.SelectedValue.ToString();
             if (cbKhoa.SelectedIndex != Program.mKhoa)
             {
-                Program.mLogin = Program.remotelogin;
+                Program.login = Program.remotelogin;
                 Program.password = Program.remotepassword;
+            }
+            else
+            {
+                Program.login = Program.mLogin;
+                Program.password = Program.mPassword;
             }
             if (Program.KetNoi() == 0)
             {
@@ -85,12 +90,19 @@ namespace QLDSVTC_CSDLPT
             }
             else
             {
-                loadGVcombobox();
-                this.LOPTINCHITableAdapter.Connection.ConnectionString = Program.connstr;
-                this.LOPTINCHITableAdapter.Fill(this.QLDSV_TC.LOPTINCHI);
-                this.DANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.DANGKYTableAdapter.Fill(this.QLDSV_TC.DANGKY);
-                macn = ((DataRowView)bdsLopTinChi[0])["MAKHOA"].ToString();
+                try
+                {
+                    loadGVcombobox();
+                    this.LOPTINCHITableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.LOPTINCHITableAdapter.Fill(this.QLDSV_TC.LOPTINCHI);
+                    this.DANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.DANGKYTableAdapter.Fill(this.QLDSV_TC.DANGKY);
+                    macn = ((DataRowView)bdsLopTinChi[0])["MAKHOA"].ToString();
+                }
+                catch
+                {
+                    MessageBox.Show("Không thể load dữ liệu từ sever đã chọn", "", MessageBoxButtons.OK);
+                }
             }
         }
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -268,6 +280,24 @@ namespace QLDSVTC_CSDLPT
             ImageCollection.DrawImageListImage(e.Cache, e.Info.ImageCollection, e.Info.ImageIndex,
                     new Rectangle(r.X + (r.Width - size.Width) / 2, r.Y + (r.Height - size.Height) / 2, size.Width, size.Height));
             brush.Dispose();
+        }
+
+        private void txbMaMH_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                cbTenMH.SelectedValue = txbMaMH.Text;
+            }
+            catch(Exception ex) { }
+
+        }
+        private void txbMaGV_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                cbTenGV.SelectedValue = txbMaGV.Text;
+            }
+            catch (Exception ex) { }
         }
 
     }

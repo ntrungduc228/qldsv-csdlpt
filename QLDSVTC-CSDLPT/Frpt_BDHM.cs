@@ -42,18 +42,30 @@ namespace QLDSVTC_CSDLPT
             Program.servername = cbKhoa.SelectedValue.ToString();
             if (cbKhoa.SelectedIndex != Program.mKhoa)
             {
-                Program.mLogin = Program.remotelogin;
+                Program.login = Program.remotelogin;
                 Program.password = Program.remotepassword;
             }
+            else
+            {
+                Program.login = Program.mLogin;
+                Program.password = Program.mPassword;
+            }
+
             if (Program.KetNoi() == 0)
             {
                 MessageBox.Show("Lỗi kết nối về chi nhánh mới", "", MessageBoxButtons.OK);
             }
             else
             {
-                this.MONHOCTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.MONHOCTableAdapter.Fill(this.qLDSV_TC.MONHOC);
-
+                try
+                {
+                    this.MONHOCTableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.MONHOCTableAdapter.Fill(this.qLDSV_TC.MONHOC);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Lỗi load dữ liệu từ sever này!", "", MessageBoxButtons.OK);
+                }
             }
         }
 

@@ -32,22 +32,35 @@ namespace QLDSVTC_CSDLPT
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label mASVLabel;
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.qLDSV_TC = new QLDSVTC_CSDLPT.QLDSV_TC();
+            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXemTruoc = new DevExpress.XtraEditors.SimpleButton();
+            this.cbMaSV = new System.Windows.Forms.ComboBox();
             this.bdsSINHVIEN = new System.Windows.Forms.BindingSource(this.components);
+            this.qLDSV_TC = new QLDSVTC_CSDLPT.QLDSV_TC();
             this.SINHVIENTableAdapter = new QLDSVTC_CSDLPT.QLDSV_TCTableAdapters.SINHVIENTableAdapter();
             this.tableAdapterManager = new QLDSVTC_CSDLPT.QLDSV_TCTableAdapters.TableAdapterManager();
-            this.cbMaSV = new System.Windows.Forms.ComboBox();
-            this.btnXemTruoc = new DevExpress.XtraEditors.SimpleButton();
-            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             mASVLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsSINHVIEN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TC)).BeginInit();
             this.SuspendLayout();
+            // 
+            // mASVLabel
+            // 
+            mASVLabel.AutoSize = true;
+            mASVLabel.BackColor = System.Drawing.Color.Transparent;
+            mASVLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            mASVLabel.Location = new System.Drawing.Point(414, 40);
+            mASVLabel.Name = "mASVLabel";
+            mASVLabel.Size = new System.Drawing.Size(118, 23);
+            mASVLabel.TabIndex = 0;
+            mASVLabel.Text = "Nhập MSSV:";
             // 
             // panelControl2
             // 
+            this.panelControl2.Appearance.BackColor = System.Drawing.Color.White;
+            this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.Controls.Add(this.btnThoat);
             this.panelControl2.Controls.Add(this.btnXemTruoc);
             this.panelControl2.Controls.Add(mASVLabel);
@@ -58,15 +71,45 @@ namespace QLDSVTC_CSDLPT
             this.panelControl2.Size = new System.Drawing.Size(1136, 101);
             this.panelControl2.TabIndex = 3;
             // 
-            // qLDSV_TC
+            // btnThoat
             // 
-            this.qLDSV_TC.DataSetName = "QLDSV_TC";
-            this.qLDSV_TC.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.btnThoat.Location = new System.Drawing.Point(895, 37);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(94, 29);
+            this.btnThoat.TabIndex = 7;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // btnXemTruoc
+            // 
+            this.btnXemTruoc.Location = new System.Drawing.Point(770, 38);
+            this.btnXemTruoc.Name = "btnXemTruoc";
+            this.btnXemTruoc.Size = new System.Drawing.Size(94, 29);
+            this.btnXemTruoc.TabIndex = 8;
+            this.btnXemTruoc.Text = "Xem trước";
+            this.btnXemTruoc.Click += new System.EventHandler(this.btnXemTruoc_Click);
+            // 
+            // cbMaSV
+            // 
+            this.cbMaSV.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsSINHVIEN, "MASV", true));
+            this.cbMaSV.DataSource = this.bdsSINHVIEN;
+            this.cbMaSV.DisplayMember = "MASV";
+            this.cbMaSV.FormattingEnabled = true;
+            this.cbMaSV.Location = new System.Drawing.Point(538, 42);
+            this.cbMaSV.Name = "cbMaSV";
+            this.cbMaSV.Size = new System.Drawing.Size(169, 24);
+            this.cbMaSV.TabIndex = 1;
+            this.cbMaSV.ValueMember = "MASV";
             // 
             // bdsSINHVIEN
             // 
             this.bdsSINHVIEN.DataMember = "SINHVIEN";
             this.bdsSINHVIEN.DataSource = this.qLDSV_TC;
+            // 
+            // qLDSV_TC
+            // 
+            this.qLDSV_TC.DataSetName = "QLDSV_TC";
+            this.qLDSV_TC.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // SINHVIENTableAdapter
             // 
@@ -84,46 +127,6 @@ namespace QLDSVTC_CSDLPT
             this.tableAdapterManager.SINHVIENTableAdapter = this.SINHVIENTableAdapter;
             this.tableAdapterManager.UpdateOrder = QLDSVTC_CSDLPT.QLDSV_TCTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // mASVLabel
-            // 
-            mASVLabel.AutoSize = true;
-            mASVLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            mASVLabel.Location = new System.Drawing.Point(414, 40);
-            mASVLabel.Name = "mASVLabel";
-            mASVLabel.Size = new System.Drawing.Size(118, 23);
-            mASVLabel.TabIndex = 0;
-            mASVLabel.Text = "Nhập MSSV:";
-            // 
-            // cbMaSV
-            // 
-            this.cbMaSV.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsSINHVIEN, "MASV", true));
-            this.cbMaSV.DataSource = this.bdsSINHVIEN;
-            this.cbMaSV.DisplayMember = "MASV";
-            this.cbMaSV.FormattingEnabled = true;
-            this.cbMaSV.Location = new System.Drawing.Point(538, 42);
-            this.cbMaSV.Name = "cbMaSV";
-            this.cbMaSV.Size = new System.Drawing.Size(169, 24);
-            this.cbMaSV.TabIndex = 1;
-            this.cbMaSV.ValueMember = "MASV";
-            // 
-            // btnXemTruoc
-            // 
-            this.btnXemTruoc.Location = new System.Drawing.Point(770, 38);
-            this.btnXemTruoc.Name = "btnXemTruoc";
-            this.btnXemTruoc.Size = new System.Drawing.Size(94, 29);
-            this.btnXemTruoc.TabIndex = 8;
-            this.btnXemTruoc.Text = "Xem trước";
-            this.btnXemTruoc.Click += new System.EventHandler(this.btnXemTruoc_Click);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Location = new System.Drawing.Point(895, 37);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(94, 29);
-            this.btnThoat.TabIndex = 7;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
             // Frpt_PhieuDiem_SV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -131,13 +134,13 @@ namespace QLDSVTC_CSDLPT
             this.ClientSize = new System.Drawing.Size(1136, 278);
             this.Controls.Add(this.panelControl2);
             this.Name = "Frpt_PhieuDiem_SV";
-            this.Text = "Frpt_PhieuDiem_SV";
+            this.Text = "In Phiếu Điểm SV";
             this.Load += new System.EventHandler(this.Frpt_PhieuDiem_SV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsSINHVIEN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TC)).EndInit();
             this.ResumeLayout(false);
 
         }

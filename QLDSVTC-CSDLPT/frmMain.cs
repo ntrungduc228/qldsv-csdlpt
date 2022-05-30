@@ -150,8 +150,7 @@ namespace QLDSVTC_CSDLPT
             {
                 f.Close();
             }
-            Form frmDangNhap = new frmDangNhap();
-
+            Program.dangNhapForm.Show();
             this.Close();
         }
         private void phieuDiembarButton_ItemClick(object sender, ItemClickEventArgs e)
@@ -161,6 +160,8 @@ namespace QLDSVTC_CSDLPT
             else
             {
                 Frpt_PhieuDiem_SV f = new Frpt_PhieuDiem_SV();
+                f.MdiParent = this;
+                f.Show();
             }
         }
 

@@ -84,8 +84,13 @@ namespace QLDSVTC_CSDLPT
             Program.servername = cbKhoa.SelectedValue.ToString();
             if (cbKhoa.SelectedIndex != Program.mKhoa)
             {
-                Program.mLogin = Program.remotelogin;
+                Program.login = Program.remotelogin;
                 Program.password = Program.remotepassword;
+            }
+            else
+            {
+                Program.login = Program.mLogin;
+                Program.password = Program.mPassword;
             }
             if (Program.KetNoi() == 0)
             {
@@ -93,8 +98,13 @@ namespace QLDSVTC_CSDLPT
             }
             else
             {
-                loadcbNienkhoa();
-                cbNienKhoa.SelectedIndex = 0;
+                try { 
+                    loadcbNienkhoa();
+                    cbNienKhoa.SelectedIndex = 0;
+                } catch(Exception ex)
+                {
+                    MessageBox.Show("Lỗi load dữ liệu từ sever này!", "", MessageBoxButtons.OK);
+                }
             }
         }
         void load_SV_DangKy()

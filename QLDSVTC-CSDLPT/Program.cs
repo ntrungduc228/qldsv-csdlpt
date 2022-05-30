@@ -26,6 +26,7 @@ namespace QLDSVTC_CSDLPT
         public static String servername2 = "THU-PC\\SUSU";
         public static String username = "";
         public static String password = "";
+        public static String login = "";
 
         public static String database = "QLDSV_TC";
         public static String remotelogin = "HTKN";
@@ -45,7 +46,7 @@ namespace QLDSVTC_CSDLPT
             try
             {
                 Program.connstr = "Data Source=" + Program.servername + ";Initial Catalog=" + Program.database + ";User ID=" +
-                      Program.mLogin + ";Password=" + Program.mPassword;
+                      Program.login + ";Password=" + Program.password;
                 Program.conn.ConnectionString = Program.connstr;
                 Program.conn.Open();
                 return 1;
