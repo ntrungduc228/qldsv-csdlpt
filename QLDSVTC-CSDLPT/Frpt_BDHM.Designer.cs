@@ -35,6 +35,9 @@ namespace QLDSVTC_CSDLPT
             this.label1 = new System.Windows.Forms.Label();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.cbHocKi = new System.Windows.Forms.ComboBox();
+            this.cbMonHoc = new System.Windows.Forms.ComboBox();
+            this.bdsMONHOC = new System.Windows.Forms.BindingSource(this.components);
+            this.qLDSV_TC = new QLDSVTC_CSDLPT.QLDSV_TC();
             this.label5 = new System.Windows.Forms.Label();
             this.cbNhom = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,17 +46,14 @@ namespace QLDSVTC_CSDLPT
             this.label3 = new System.Windows.Forms.Label();
             this.cbNienKhoa = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.qLDSV_TC = new QLDSVTC_CSDLPT.QLDSV_TC();
-            this.bdsMONHOC = new System.Windows.Forms.BindingSource(this.components);
             this.MONHOCTableAdapter = new QLDSVTC_CSDLPT.QLDSV_TCTableAdapters.MONHOCTableAdapter();
             this.tableAdapterManager = new QLDSVTC_CSDLPT.QLDSV_TCTableAdapters.TableAdapterManager();
-            this.cbMonHoc = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsMONHOC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TC)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -115,6 +115,29 @@ namespace QLDSVTC_CSDLPT
             this.cbHocKi.Name = "cbHocKi";
             this.cbHocKi.Size = new System.Drawing.Size(51, 24);
             this.cbHocKi.TabIndex = 12;
+            // 
+            // cbMonHoc
+            // 
+            this.cbMonHoc.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsMONHOC, "TENMH", true));
+            this.cbMonHoc.DataSource = this.bdsMONHOC;
+            this.cbMonHoc.DisplayMember = "TENMH";
+            this.cbMonHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMonHoc.FormattingEnabled = true;
+            this.cbMonHoc.Location = new System.Drawing.Point(520, 21);
+            this.cbMonHoc.Name = "cbMonHoc";
+            this.cbMonHoc.Size = new System.Drawing.Size(167, 24);
+            this.cbMonHoc.TabIndex = 5;
+            this.cbMonHoc.ValueMember = "TENMH";
+            // 
+            // bdsMONHOC
+            // 
+            this.bdsMONHOC.DataMember = "MONHOC";
+            this.bdsMONHOC.DataSource = this.qLDSV_TC;
+            // 
+            // qLDSV_TC
+            // 
+            this.qLDSV_TC.DataSetName = "QLDSV_TC";
+            this.qLDSV_TC.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label5
             // 
@@ -196,16 +219,6 @@ namespace QLDSVTC_CSDLPT
             this.label2.TabIndex = 2;
             this.label2.Text = "Niên Khóa:";
             // 
-            // qLDSV_TC
-            // 
-            this.qLDSV_TC.DataSetName = "QLDSV_TC";
-            this.qLDSV_TC.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bdsMONHOC
-            // 
-            this.bdsMONHOC.DataMember = "MONHOC";
-            this.bdsMONHOC.DataSource = this.qLDSV_TC;
-            // 
             // MONHOCTableAdapter
             // 
             this.MONHOCTableAdapter.ClearBeforeFill = true;
@@ -222,19 +235,6 @@ namespace QLDSVTC_CSDLPT
             this.tableAdapterManager.SINHVIENTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = QLDSVTC_CSDLPT.QLDSV_TCTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // cbMonHoc
-            // 
-            this.cbMonHoc.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsMONHOC, "TENMH", true));
-            this.cbMonHoc.DataSource = this.bdsMONHOC;
-            this.cbMonHoc.DisplayMember = "TENMH";
-            this.cbMonHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMonHoc.FormattingEnabled = true;
-            this.cbMonHoc.Location = new System.Drawing.Point(520, 21);
-            this.cbMonHoc.Name = "cbMonHoc";
-            this.cbMonHoc.Size = new System.Drawing.Size(167, 24);
-            this.cbMonHoc.TabIndex = 5;
-            this.cbMonHoc.ValueMember = "TENMH";
-            // 
             // Frpt_BDHM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -243,7 +243,7 @@ namespace QLDSVTC_CSDLPT
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "Frpt_BDHM";
-            this.Text = "Frpt_BDHM";
+            this.Text = "In Bảng Điểm Hết Môn";
             this.Load += new System.EventHandler(this.Frpt_BDHM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -251,8 +251,8 @@ namespace QLDSVTC_CSDLPT
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsMONHOC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TC)).EndInit();
             this.ResumeLayout(false);
 
         }

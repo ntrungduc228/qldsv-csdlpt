@@ -83,6 +83,7 @@ namespace QLDSVTC_CSDLPT
             // 
             // cbKhoa
             // 
+            this.cbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbKhoa.FormattingEnabled = true;
             this.cbKhoa.Location = new System.Drawing.Point(654, 20);
             this.cbKhoa.Name = "cbKhoa";
@@ -278,6 +279,8 @@ namespace QLDSVTC_CSDLPT
             // 
             // colMALTC
             // 
+            this.colMALTC.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.colMALTC.AppearanceHeader.Options.UseBackColor = true;
             this.colMALTC.Caption = "Mã LTC";
             this.colMALTC.FieldName = "MALTC";
             this.colMALTC.MinWidth = 25;
@@ -289,6 +292,8 @@ namespace QLDSVTC_CSDLPT
             // 
             // colMASV
             // 
+            this.colMASV.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.colMASV.AppearanceHeader.Options.UseBackColor = true;
             this.colMASV.Caption = "Mã SV";
             this.colMASV.FieldName = "MASV";
             this.colMASV.MinWidth = 25;
@@ -300,6 +305,8 @@ namespace QLDSVTC_CSDLPT
             // 
             // colHOTEN
             // 
+            this.colHOTEN.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.colHOTEN.AppearanceHeader.Options.UseBackColor = true;
             this.colHOTEN.Caption = "Họ tên SV";
             this.colHOTEN.FieldName = "HOTEN";
             this.colHOTEN.MinWidth = 25;
@@ -311,6 +318,8 @@ namespace QLDSVTC_CSDLPT
             // 
             // colDIEM_CC
             // 
+            this.colDIEM_CC.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.colDIEM_CC.AppearanceHeader.Options.UseBackColor = true;
             this.colDIEM_CC.Caption = "Điểm chuyên cần";
             this.colDIEM_CC.FieldName = "DIEM_CC";
             this.colDIEM_CC.MinWidth = 25;
@@ -321,6 +330,8 @@ namespace QLDSVTC_CSDLPT
             // 
             // colDIEM_GK
             // 
+            this.colDIEM_GK.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.colDIEM_GK.AppearanceHeader.Options.UseBackColor = true;
             this.colDIEM_GK.Caption = "Điểm giữa kì";
             this.colDIEM_GK.FieldName = "DIEM_GK";
             this.colDIEM_GK.MinWidth = 25;
@@ -331,6 +342,8 @@ namespace QLDSVTC_CSDLPT
             // 
             // colDIEM_CK
             // 
+            this.colDIEM_CK.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.colDIEM_CK.AppearanceHeader.Options.UseBackColor = true;
             this.colDIEM_CK.Caption = "Điểm cuối kì";
             this.colDIEM_CK.FieldName = "DIEM_CK";
             this.colDIEM_CK.MinWidth = 25;
@@ -341,6 +354,8 @@ namespace QLDSVTC_CSDLPT
             // 
             // gridColumn1
             // 
+            this.gridColumn1.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.gridColumn1.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn1.Caption = "Điểm hết môn";
             this.gridColumn1.FieldName = "gridColumn1";
             this.gridColumn1.MinWidth = 25;

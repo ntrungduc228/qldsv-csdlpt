@@ -15,6 +15,7 @@ namespace QLDSVTC_CSDLPT
     public partial class frmDangNhap : DevExpress.XtraEditors.XtraForm
     {
         private SqlConnection conn_publisher = new SqlConnection();
+        private bool isSinhVien = false;
         public frmDangNhap()
         {
             InitializeComponent();
@@ -67,31 +68,80 @@ namespace QLDSVTC_CSDLPT
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if(txbTaiKhoan.Text.Trim() == "" || txbMatKhau.Text.Trim() == "")
+            if (isSinhVien == false)
             {
-                MessageBox.Show("Login name và mật khẩu không được trống", "", MessageBoxButtons.OK);
-                return;
+                if (txbTaiKhoan.Text.Trim() == "" || txbMatKhau.Text.Trim() == "")
+                {
+                    MessageBox.Show("Login name và mật khẩu không được trống", "", MessageBoxButtons.OK);
+                    return;
+                }
+            }
+            else
+            {
+                if (txbTaiKhoan.Text.Trim() == "")
+                {
+                    MessageBox.Show("Login name không được trống", "", MessageBoxButtons.OK);
+                    return;
+                }
+            }
+            if (isSinhVien == true)
+            {
+                Program.login = "SVKN";
+                Program.password = "123456";
+                if (Program.KetNoi() == 0) return;
+            }
+            else
+            {
+                Program.login = txbTaiKhoan.Text; Program.password = txbMatKhau.Text;
+                if (Program.KetNoi() == 0) return;
             }
 
-            Program.mLogin = txbTaiKhoan.Text; Program.mPassword = txbMatKhau.Text;
-           
-            if (Program.KetNoi() == 0) return;
-
-            
-
             Program.mKhoa = cbChiNhanh.SelectedIndex;
-            string strLenh = "EXEC dbo.SP_Lay_Thong_Tin_GV_Tu_Login '" + Program.mLogin + "'";
+            Program.mLogin = Program.login;
+            Program.mPassword = Program.password;
+
+            string strLenh = "EXEC dbo.SP_Lay_Thong_Tin_GV_Tu_Login '" + Program.login + "'";
             Program.myReader = Program.ExecSqlDataReader(strLenh);
             if (Program.myReader == null) return;
             Program.myReader.Read(); // Đọc 1 dòng nếu dữ liệu có nhiều dùng thì dùng for lặp nếu null thì break
             Program.mGroup = Program.myReader.GetString(2);
-            Program.username = Program.myReader.GetString(0);
-            Program.mHoten = Program.myReader.GetString(1);
+
+            if (isSinhVien == false)
+            {
+                Program.mHoten = Program.myReader.GetString(1);
+                Program.username = Program.myReader.GetString(0);
+            }
             Program.myReader.Close();
 
+            string strlenh1 = "EXEC [dbo].[SP_LayThongTinSV_DangNhap] '" + txbTaiKhoan.Text + "', '" + txbMatKhau.Text + "'";
+            SqlDataReader reader = Program.ExecSqlDataReader(strlenh1);
+
+            if (reader.HasRows == false && isSinhVien == true)
+            {
+                MessageBox.Show("Đăng nhập thất bại! \nMã sinh viên không tồn tại");
+                return;
+            }
+
+            reader.Read();
+
+            if (Convert.IsDBNull(Program.username))
+            {
+                MessageBox.Show("Login bạn nhập không có quyền truy cập dữ liệu\n Bạn xem lại username, password", "", MessageBoxButtons.OK);
+                return;
+            }
+
+            if (isSinhVien == true)
+            {
+                try
+                {
+                    Program.mHoten = reader.GetString(1);
+                    Program.username = reader.GetString(0);
+                }
+                catch (Exception) { }
+            }
             Program.conn.Close();
-           
-            MessageBox.Show("Đăng nhập thành công !!!");
+            reader.Close();
+            // MessageBox.Show("Đăng nhập thành công !!!");
             //Form f = new frmMain();
             //f.ShowDialog();
             // truy cập vào frm main 
@@ -111,6 +161,11 @@ namespace QLDSVTC_CSDLPT
                 Program.servername = cbChiNhanh.SelectedValue.ToString();
             }
             catch (Exception) { }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            isSinhVien = !isSinhVien;
         }
     }
 }

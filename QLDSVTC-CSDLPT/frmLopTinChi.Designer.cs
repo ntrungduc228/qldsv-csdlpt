@@ -51,7 +51,6 @@ namespace QLDSVTC_CSDLPT
             this.btnGhi = new DevExpress.XtraBars.BarButtonItem();
             this.btnLamMoi = new DevExpress.XtraBars.BarButtonItem();
             this.btnThoat = new DevExpress.XtraBars.BarButtonItem();
-            this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -230,8 +229,7 @@ namespace QLDSVTC_CSDLPT
             // 
             this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
             this.bar1,
-            this.bar2,
-            this.bar3});
+            this.bar2});
             this.barManager1.DockControls.Add(this.barDockControlTop);
             this.barManager1.DockControls.Add(this.barDockControlBottom);
             this.barManager1.DockControls.Add(this.barDockControlLeft);
@@ -247,7 +245,6 @@ namespace QLDSVTC_CSDLPT
             this.btnThoat});
             this.barManager1.MainMenu = this.bar2;
             this.barManager1.MaxItemId = 8;
-            this.barManager1.StatusBar = this.bar3;
             // 
             // bar1
             // 
@@ -338,33 +335,21 @@ namespace QLDSVTC_CSDLPT
             this.btnThoat.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick);
             // 
-            // bar3
-            // 
-            this.bar3.BarName = "Status bar";
-            this.bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
-            this.bar3.DockCol = 0;
-            this.bar3.DockRow = 0;
-            this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
-            this.bar3.OptionsBar.AllowQuickCustomization = false;
-            this.bar3.OptionsBar.DrawDragBorder = false;
-            this.bar3.OptionsBar.UseWholeRow = true;
-            this.bar3.Text = "Status bar";
-            // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1237, 51);
+            this.barDockControlTop.Size = new System.Drawing.Size(1506, 51);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 667);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 703);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1237, 20);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1506, 0);
             // 
             // barDockControlLeft
             // 
@@ -372,15 +357,15 @@ namespace QLDSVTC_CSDLPT
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 51);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 616);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 652);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1237, 51);
+            this.barDockControlRight.Location = new System.Drawing.Point(1506, 51);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 616);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 652);
             // 
             // panelControl1
             // 
@@ -388,16 +373,17 @@ namespace QLDSVTC_CSDLPT
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 51);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1237, 80);
+            this.panelControl1.Size = new System.Drawing.Size(1506, 80);
             this.panelControl1.TabIndex = 4;
             // 
             // cbKhoa
             // 
+            this.cbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbKhoa.FormattingEnabled = true;
             this.cbKhoa.Location = new System.Drawing.Point(866, 21);
-            this.cbKhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.cbKhoa.Name = "cbKhoa";
             this.cbKhoa.Size = new System.Drawing.Size(328, 24);
             this.cbKhoa.TabIndex = 1;
@@ -452,13 +438,13 @@ namespace QLDSVTC_CSDLPT
             // 
             this.LOPTINCHIGridControl.DataSource = this.bdsLopTinChi;
             this.LOPTINCHIGridControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.LOPTINCHIGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LOPTINCHIGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.LOPTINCHIGridControl.Location = new System.Drawing.Point(0, 131);
             this.LOPTINCHIGridControl.MainView = this.gridView1;
-            this.LOPTINCHIGridControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LOPTINCHIGridControl.Margin = new System.Windows.Forms.Padding(4);
             this.LOPTINCHIGridControl.MenuManager = this.barManager1;
             this.LOPTINCHIGridControl.Name = "LOPTINCHIGridControl";
-            this.LOPTINCHIGridControl.Size = new System.Drawing.Size(1237, 366);
+            this.LOPTINCHIGridControl.Size = new System.Drawing.Size(1506, 253);
             this.LOPTINCHIGridControl.TabIndex = 6;
             this.LOPTINCHIGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -633,17 +619,17 @@ namespace QLDSVTC_CSDLPT
             this.panelControl2.Controls.Add(nIENKHOALabel);
             this.panelControl2.Controls.Add(this.txbNienKhoa);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 497);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl2.Location = new System.Drawing.Point(0, 384);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1237, 170);
+            this.panelControl2.Size = new System.Drawing.Size(1506, 319);
             this.panelControl2.TabIndex = 7;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::QLDSVTC_CSDLPT.Properties.Resources.monhoc;
             this.pictureBox1.Location = new System.Drawing.Point(481, 79);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(194, 179);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -663,9 +649,10 @@ namespace QLDSVTC_CSDLPT
             // 
             // cbTenGV
             // 
+            this.cbTenGV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTenGV.FormattingEnabled = true;
             this.cbTenGV.Location = new System.Drawing.Point(842, 156);
-            this.cbTenGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbTenGV.Margin = new System.Windows.Forms.Padding(4);
             this.cbTenGV.Name = "cbTenGV";
             this.cbTenGV.Size = new System.Drawing.Size(202, 24);
             this.cbTenGV.TabIndex = 21;
@@ -673,10 +660,10 @@ namespace QLDSVTC_CSDLPT
             // 
             // cbTenMH
             // 
-            this.cbTenMH.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsMonHoc, "TENMH", true));
+            this.cbTenMH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTenMH.FormattingEnabled = true;
             this.cbTenMH.Location = new System.Drawing.Point(842, 106);
-            this.cbTenMH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbTenMH.Margin = new System.Windows.Forms.Padding(4);
             this.cbTenMH.Name = "cbTenMH";
             this.cbTenMH.Size = new System.Drawing.Size(202, 24);
             this.cbTenMH.TabIndex = 20;
@@ -691,7 +678,7 @@ namespace QLDSVTC_CSDLPT
             // 
             this.ceHuyLop.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLopTinChi, "HUYLOP", true));
             this.ceHuyLop.Location = new System.Drawing.Point(1271, 248);
-            this.ceHuyLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ceHuyLop.Margin = new System.Windows.Forms.Padding(4);
             this.ceHuyLop.MenuManager = this.barManager1;
             this.ceHuyLop.Name = "ceHuyLop";
             this.ceHuyLop.Properties.Caption = "";
@@ -707,7 +694,7 @@ namespace QLDSVTC_CSDLPT
             0,
             0});
             this.speSoSVToiThieu.Location = new System.Drawing.Point(842, 248);
-            this.speSoSVToiThieu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.speSoSVToiThieu.Margin = new System.Windows.Forms.Padding(4);
             this.speSoSVToiThieu.MenuManager = this.barManager1;
             this.speSoSVToiThieu.Name = "speSoSVToiThieu";
             this.speSoSVToiThieu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -719,7 +706,7 @@ namespace QLDSVTC_CSDLPT
             // 
             this.txbMaKhoa.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLopTinChi, "MAKHOA", true));
             this.txbMaKhoa.Location = new System.Drawing.Point(1271, 199);
-            this.txbMaKhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbMaKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.txbMaKhoa.MenuManager = this.barManager1;
             this.txbMaKhoa.Name = "txbMaKhoa";
             this.txbMaKhoa.Properties.ReadOnly = true;
@@ -735,7 +722,7 @@ namespace QLDSVTC_CSDLPT
             0,
             0});
             this.speNhom.Location = new System.Drawing.Point(842, 199);
-            this.speNhom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.speNhom.Margin = new System.Windows.Forms.Padding(4);
             this.speNhom.MenuManager = this.barManager1;
             this.speNhom.Name = "speNhom";
             this.speNhom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -747,23 +734,25 @@ namespace QLDSVTC_CSDLPT
             // 
             this.txbMaGV.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLopTinChi, "MAGV", true));
             this.txbMaGV.Location = new System.Drawing.Point(1271, 156);
-            this.txbMaGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbMaGV.Margin = new System.Windows.Forms.Padding(4);
             this.txbMaGV.MenuManager = this.barManager1;
             this.txbMaGV.Name = "txbMaGV";
             this.txbMaGV.Properties.ReadOnly = true;
             this.txbMaGV.Size = new System.Drawing.Size(198, 22);
             this.txbMaGV.TabIndex = 11;
+            this.txbMaGV.EditValueChanged += new System.EventHandler(this.txbMaGV_EditValueChanged);
             // 
             // txbMaMH
             // 
             this.txbMaMH.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLopTinChi, "MAMH", true));
             this.txbMaMH.Location = new System.Drawing.Point(1271, 106);
-            this.txbMaMH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbMaMH.Margin = new System.Windows.Forms.Padding(4);
             this.txbMaMH.MenuManager = this.barManager1;
             this.txbMaMH.Name = "txbMaMH";
             this.txbMaMH.Properties.ReadOnly = true;
             this.txbMaMH.Size = new System.Drawing.Size(198, 22);
             this.txbMaMH.TabIndex = 7;
+            this.txbMaMH.EditValueChanged += new System.EventHandler(this.txbMaMH_EditValueChanged);
             // 
             // speHocKi
             // 
@@ -774,7 +763,7 @@ namespace QLDSVTC_CSDLPT
             0,
             0});
             this.speHocKi.Location = new System.Drawing.Point(1271, 58);
-            this.speHocKi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.speHocKi.Margin = new System.Windows.Forms.Padding(4);
             this.speHocKi.MenuManager = this.barManager1;
             this.speHocKi.Name = "speHocKi";
             this.speHocKi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -786,7 +775,7 @@ namespace QLDSVTC_CSDLPT
             // 
             this.txbNienKhoa.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLopTinChi, "NIENKHOA", true));
             this.txbNienKhoa.Location = new System.Drawing.Point(842, 59);
-            this.txbNienKhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbNienKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.txbNienKhoa.MenuManager = this.barManager1;
             this.txbNienKhoa.Name = "txbNienKhoa";
             this.txbNienKhoa.Size = new System.Drawing.Size(202, 22);
@@ -810,7 +799,7 @@ namespace QLDSVTC_CSDLPT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1237, 687);
+            this.ClientSize = new System.Drawing.Size(1506, 703);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.LOPTINCHIGridControl);
             this.Controls.Add(this.panelControl1);
@@ -861,7 +850,6 @@ namespace QLDSVTC_CSDLPT
         private DevExpress.XtraBars.BarButtonItem btnGhi;
         private DevExpress.XtraBars.BarButtonItem btnLamMoi;
         private DevExpress.XtraBars.BarButtonItem btnThoat;
-        private DevExpress.XtraBars.Bar bar3;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;

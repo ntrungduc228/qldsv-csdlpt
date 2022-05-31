@@ -43,7 +43,18 @@ namespace QLDSVTC_CSDLPT
 
         void PhanQuyen()
         {
-            
+            if (Program.mGroup.Equals("SV"))
+            {
+                DangKibarButton.Enabled = true;
+                DiemButtonItem.Enabled = HocPhibarButton.Enabled = LopHocbarButton.Enabled = LopTinChibarButton.Enabled = MonHocButtonItem.Enabled = btnSinhVien.Enabled = btnTaoTK.Enabled = false;
+                rpBaoCao.Visible = false;
+            }
+            if (Program.mGroup.Equals("PKT"))
+            {
+                HocPhibarButton.Enabled = true;
+                DiemButtonItem.Enabled = LopHocbarButton.Enabled = LopTinChibarButton.Enabled = MonHocButtonItem.Enabled = btnSinhVien.Enabled = DangKibarButton.Enabled = false;
+                rpBaoCao.Visible = false;
+            }
             if (Program.mGroup.Equals("PGV") || Program.mGroup.Equals("KHOA"))
             {
                 DangKibarButton.Enabled = HocPhibarButton.Enabled = false;
@@ -112,6 +123,15 @@ namespace QLDSVTC_CSDLPT
             }
         }
 
+        private void HocPhibarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmHocPhi));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmHocPhi f = new frmHocPhi();
+            }
+        }
         private void BDHMbarButton_ItemClick(object sender, ItemClickEventArgs e)
         {
             Form frm = this.CheckExists(typeof(Frpt_BDHM));
@@ -124,6 +144,15 @@ namespace QLDSVTC_CSDLPT
             }
         }
 
+        private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                f.Close();
+            }
+            Program.dangNhapForm.Show();
+            this.Close();
+        }
         private void phieuDiembarButton_ItemClick(object sender, ItemClickEventArgs e)
         {
             Form frm = this.CheckExists(typeof(Frpt_PhieuDiem_SV));
@@ -147,6 +176,17 @@ namespace QLDSVTC_CSDLPT
                 f.Show();
             }
         }
+        private void DSHPbarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frptHocPhi));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frptHocPhi f = new frptHocPhi();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
 
         private void DSDKbarButton_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -155,6 +195,41 @@ namespace QLDSVTC_CSDLPT
             else
             {
                 Frpt_DSSVDKLTC f = new Frpt_DSSVDKLTC();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+        private void BDTKbarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frptBDTK));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frptBDTK f = new frptBDTK();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnTaoTK_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmTaoTaiKhoan));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmTaoTaiKhoan f = new frmTaoTaiKhoan();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void DangKibarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmDangKi));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmDangKi f = new frmDangKi();
                 f.MdiParent = this;
                 f.Show();
             }

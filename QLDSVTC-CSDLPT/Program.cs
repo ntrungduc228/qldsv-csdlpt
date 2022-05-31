@@ -18,7 +18,7 @@ namespace QLDSVTC_CSDLPT
 
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
-        public static String connstr_publicsher = "Data Source=LAPTOP-9AGN7PH3;Initial Catalog=QLDSV_TC;Integrated Security=True";
+        public static String connstr_publicsher = "Data Source=DESKTOP-PN0LV22;Initial Catalog=QLDSV_TC;Integrated Security=True";
         public static SqlDataAdapter da;
         public static SqlDataReader myReader;
         public static String servername = "";
@@ -27,6 +27,7 @@ namespace QLDSVTC_CSDLPT
         public static String username = "";
         public static String mlogin = "";
         public static String password = "";
+        public static String login = "";
 
         public static String database = "QLDSV_TC";
         public static String remotelogin = "HTKN";
@@ -46,7 +47,7 @@ namespace QLDSVTC_CSDLPT
             try
             {
                 Program.connstr = "Data Source=" + Program.servername + ";Initial Catalog=" + Program.database + ";User ID=" +
-                      Program.mLogin + ";Password=" + Program.mPassword;
+                      Program.login + ";Password=" + Program.password;
                 Program.conn.ConnectionString = Program.connstr;
                 Program.conn.Open();
                 return 1;

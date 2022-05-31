@@ -81,6 +81,15 @@
     <Compile Include="Frpt_DSLTC.Designer.cs">
       <DependentUpon>Frpt_DSLTC.cs</DependentUpon>
     </Compile>
+	<Compile Include="formDSLTC.Designer.cs">
+		<DependentUpon>formDSLTC.cs</DependentUpon>
+	</Compile>
+    <Compile Include="frmDangKi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangKi.Designer.cs">
+      <DependentUpon>frmDangKi.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +126,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHocPhi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHocPhi.Designer.cs">
+      <DependentUpon>frmHocPhi.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +156,24 @@
     <Compile Include="Frpt_PhieuDiem_SV.Designer.cs">
       <DependentUpon>Frpt_PhieuDiem_SV.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTaoTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTaoTaiKhoan.Designer.cs">
+      <DependentUpon>frmTaoTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frptBDTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frptBDTK.Designer.cs">
+      <DependentUpon>frptBDTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frptHocPhi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frptHocPhi.Designer.cs">
+      <DependentUpon>frptHocPhi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLDSV_TC.Designer.cs">
@@ -148,8 +181,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDSV_TC.xsd</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="Frpt_DSLTC.resx">
       <DependentUpon>Frpt_DSLTC.cs</DependentUpon>
+=======
+    <Compile Include="QLDSV_TCSite3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDSV_TCSite3.xsd</DependentUpon>
+     </Compile>
+    <EmbeddedResource Include="formDSLTC.resx">
+      <DependentUpon>formDSLTC.cs</DependentUpon>
+>>>>>>> 2c3776185fc7746eca5b2b69f51ec09e3c04b23e
     </EmbeddedResource>
     <Compile Include="Xrpt_BDHM.cs">
       <SubType>Component</SubType>
@@ -175,6 +218,15 @@
     <Compile Include="Xrpt_PhieuDiem_SV.Designer.cs">
       <DependentUpon>Xrpt_PhieuDiem_SV.cs</DependentUpon>
     </Compile>
+    <Compile Include="XrptInHocPhi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XrptInHocPhi.Designer.cs">
+      <DependentUpon>XrptInHocPhi.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmDangKi.resx">
+      <DependentUpon>frmDangKi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +245,9 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmHocPhi.resx">
+      <DependentUpon>frmHocPhi.cs</DependentUpon>
+     </EmbeddedResource>
     <EmbeddedResource Include="frmSinhVien.resx">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +259,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frpt_PhieuDiem_SV.resx">
       <DependentUpon>Frpt_PhieuDiem_SV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTaoTaiKhoan.resx">
+      <DependentUpon>frmTaoTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frptBDTK.resx">
+      <DependentUpon>frptBDTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frptHocPhi.resx">
+      <DependentUpon>frptHocPhi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -227,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Xrpt_PhieuDiem_SV.resx">
       <DependentUpon>Xrpt_PhieuDiem_SV.cs</DependentUpon>
+ </EmbeddedResource>
+    <EmbeddedResource Include="XrptInHocPhi.resx">
+      <DependentUpon>XrptInHocPhi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
@@ -248,6 +315,17 @@
     </None>
     <None Include="QLDSV_TC.xss">
       <DependentUpon>QLDSV_TC.xsd</DependentUpon>
+    </None>
+    <None Include="QLDSV_TCSite3.xsc">
+      <DependentUpon>QLDSV_TCSite3.xsd</DependentUpon>
+    </None>
+    <None Include="QLDSV_TCSite3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDSV_TCSite3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDSV_TCSite3.xss">
+      <DependentUpon>QLDSV_TCSite3.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -46,7 +46,7 @@ namespace QLDSVTC_CSDLPT
             // labelControl3
             // 
             this.labelControl3.Location = new System.Drawing.Point(64, 176);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(56, 17);
             this.labelControl3.TabIndex = 2;
@@ -55,7 +55,7 @@ namespace QLDSVTC_CSDLPT
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(64, 126);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(59, 17);
             this.labelControl2.TabIndex = 3;
@@ -64,7 +64,7 @@ namespace QLDSVTC_CSDLPT
             // labelControl4
             // 
             this.labelControl4.Location = new System.Drawing.Point(64, 76);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(58, 16);
             this.labelControl4.TabIndex = 4;
@@ -79,12 +79,13 @@ namespace QLDSVTC_CSDLPT
             this.checkBox1.TabIndex = 12;
             this.checkBox1.Text = "Sinh viên";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // cbChiNhanh
             // 
             this.cbChiNhanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbChiNhanh.FormattingEnabled = true;
-            this.cbChiNhanh.Location = new System.Drawing.Point(144, 61);
+            this.cbChiNhanh.Location = new System.Drawing.Point(144, 73);
             this.cbChiNhanh.Name = "cbChiNhanh";
             this.cbChiNhanh.Size = new System.Drawing.Size(284, 24);
             this.cbChiNhanh.TabIndex = 7;
@@ -94,10 +95,10 @@ namespace QLDSVTC_CSDLPT
             // 
             this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(298, 252);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThoat.Location = new System.Drawing.Point(298, 253);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(130, 49);
+            this.btnThoat.Size = new System.Drawing.Size(99, 47);
             this.btnThoat.TabIndex = 11;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
@@ -107,9 +108,9 @@ namespace QLDSVTC_CSDLPT
             this.btnDangNhap.AutoSize = true;
             this.btnDangNhap.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDangNhap.ImageOptions.SvgImage")));
             this.btnDangNhap.Location = new System.Drawing.Point(111, 255);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(118, 44);
+            this.btnDangNhap.Size = new System.Drawing.Size(127, 44);
             this.btnDangNhap.TabIndex = 10;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
@@ -117,7 +118,7 @@ namespace QLDSVTC_CSDLPT
             // txbMatKhau
             // 
             this.txbMatKhau.EditValue = "123";
-            this.txbMatKhau.Location = new System.Drawing.Point(144, 138);
+            this.txbMatKhau.Location = new System.Drawing.Point(144, 173);
             this.txbMatKhau.Name = "txbMatKhau";
             this.txbMatKhau.Properties.UseSystemPasswordChar = true;
             this.txbMatKhau.Size = new System.Drawing.Size(284, 22);
@@ -126,8 +127,8 @@ namespace QLDSVTC_CSDLPT
             // txbTaiKhoan
             // 
             this.txbTaiKhoan.EditValue = "thu";
-            this.txbTaiKhoan.Location = new System.Drawing.Point(144, 121);
-            this.txbTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbTaiKhoan.Location = new System.Drawing.Point(144, 123);
+            this.txbTaiKhoan.Margin = new System.Windows.Forms.Padding(4);
             this.txbTaiKhoan.Name = "txbTaiKhoan";
             this.txbTaiKhoan.Size = new System.Drawing.Size(284, 22);
             this.txbTaiKhoan.TabIndex = 8;
