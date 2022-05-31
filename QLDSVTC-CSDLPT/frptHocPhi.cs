@@ -167,7 +167,7 @@ namespace QLDSVTC_CSDLPT
         {
             if (Program.mGroup.Equals("PGV") || Program.mGroup.Equals("KHOA"))
             {
-                if (KetNoiSql("DESKTOP-PN0LV22\\SQLSV3", Program.remotelogin, Program.remotepassword) == 0)
+                if (KetNoiSql("LAPTOP-7N35DOAE\\SQLSV3", Program.remotelogin, Program.remotepassword) == 0)
                 {
                     MessageBox.Show("Lỗi kết nối về chi nhánh mới", "", MessageBoxButtons.OK);
                 }
@@ -223,6 +223,11 @@ namespace QLDSVTC_CSDLPT
 
             ReportPrintTool print = new ReportPrintTool(rpt);
             print.ShowPreviewDialog();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
