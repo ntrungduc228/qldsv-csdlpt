@@ -90,9 +90,9 @@ namespace QLDSVTC_CSDLPT
             this.cedDangnghihoc = new DevExpress.XtraEditors.CheckEdit();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bdsDangky = new System.Windows.Forms.BindingSource(this.components);
+            this.fKCTLTCSINHVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dANGKYTableAdapter = new QLDSVTC_CSDLPT.QLDSV_TCTableAdapters.DANGKYTableAdapter();
             this.tedMasv = new DevExpress.XtraEditors.TextEdit();
-            this.fKCTLTCSINHVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
             hOLabel = new System.Windows.Forms.Label();
             tENLabel = new System.Windows.Forms.Label();
             pHAILabel = new System.Windows.Forms.Label();
@@ -122,8 +122,8 @@ namespace QLDSVTC_CSDLPT
             ((System.ComponentModel.ISupportInitialize)(this.cedDangnghihoc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsDangky)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tedMasv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKCTLTCSINHVIENBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tedMasv.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // hOLabel
@@ -371,6 +371,7 @@ namespace QLDSVTC_CSDLPT
             // 
             // cobKhoa
             // 
+            this.cobKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cobKhoa.FormattingEnabled = true;
             this.cobKhoa.Location = new System.Drawing.Point(499, 20);
             this.cobKhoa.Name = "cobKhoa";
@@ -746,6 +747,11 @@ namespace QLDSVTC_CSDLPT
             // 
             this.bdsDangky.DataSource = this.fKCTLTCSINHVIENBindingSource;
             // 
+            // fKCTLTCSINHVIENBindingSource
+            // 
+            this.fKCTLTCSINHVIENBindingSource.DataMember = "FK_CTLTC_SINHVIEN";
+            this.fKCTLTCSINHVIENBindingSource.DataSource = this.bdsSinhvien;
+            // 
             // dANGKYTableAdapter
             // 
             this.dANGKYTableAdapter.ClearBeforeFill = true;
@@ -758,11 +764,6 @@ namespace QLDSVTC_CSDLPT
             this.tedMasv.Name = "tedMasv";
             this.tedMasv.Size = new System.Drawing.Size(173, 22);
             this.tedMasv.TabIndex = 34;
-            // 
-            // fKCTLTCSINHVIENBindingSource
-            // 
-            this.fKCTLTCSINHVIENBindingSource.DataMember = "FK_CTLTC_SINHVIEN";
-            this.fKCTLTCSINHVIENBindingSource.DataSource = this.bdsSinhvien;
             // 
             // frmSinhVien
             // 
@@ -823,8 +824,8 @@ namespace QLDSVTC_CSDLPT
             ((System.ComponentModel.ISupportInitialize)(this.cedDangnghihoc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsDangky)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tedMasv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKCTLTCSINHVIENBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tedMasv.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

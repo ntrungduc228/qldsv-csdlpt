@@ -334,7 +334,7 @@ namespace QLDSVTC_CSDLPT
             Program.servername = cobKhoa.SelectedValue.ToString();
             if (cobKhoa.SelectedIndex != Program.mKhoa)
             {
-                Program.mlogin = Program.remotelogin;
+                Program.login = Program.remotelogin;
                 Program.password = Program.remotepassword;
             }
             
@@ -344,11 +344,17 @@ namespace QLDSVTC_CSDLPT
             }
             else
             {
-                this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.lOPTableAdapter.Fill(this.qLDSV_TC.LOP);
-                this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.sINHVIENTableAdapter.Fill(this.qLDSV_TC.SINHVIEN);
-                macn = ((DataRowView)bdsLop[0])["MAKHOA"].ToString();
+                try
+                {
+                    this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.lOPTableAdapter.Fill(this.qLDSV_TC.LOP);
+                    this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.sINHVIENTableAdapter.Fill(this.qLDSV_TC.SINHVIEN);
+                    macn = ((DataRowView)bdsLop[0])["MAKHOA"].ToString();
+                }
+                catch(Exception ex) {
+                    MessageBox.Show("Lỗi load dữ liệu từ sever này!", "", MessageBoxButtons.OK);
+                }
             }
         }
     }

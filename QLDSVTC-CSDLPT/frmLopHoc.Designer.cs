@@ -358,6 +358,7 @@ namespace QLDSVTC_CSDLPT
             // 
             // cobKhoa
             // 
+            this.cobKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cobKhoa.FormattingEnabled = true;
             this.cobKhoa.Location = new System.Drawing.Point(666, 18);
             this.cobKhoa.Name = "cobKhoa";

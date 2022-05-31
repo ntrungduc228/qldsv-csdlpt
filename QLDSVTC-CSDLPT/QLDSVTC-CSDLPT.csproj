@@ -81,9 +81,6 @@
     <Compile Include="Frpt_DSLTC.Designer.cs">
       <DependentUpon>Frpt_DSLTC.cs</DependentUpon>
     </Compile>
-	<Compile Include="formDSLTC.Designer.cs">
-		<DependentUpon>formDSLTC.cs</DependentUpon>
-	</Compile>
     <Compile Include="frmDangKi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,19 +178,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDSV_TC.xsd</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <EmbeddedResource Include="Frpt_DSLTC.resx">
       <DependentUpon>Frpt_DSLTC.cs</DependentUpon>
-=======
+    </EmbeddedResource>
     <Compile Include="QLDSV_TCSite3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDSV_TCSite3.xsd</DependentUpon>
-     </Compile>
-    <EmbeddedResource Include="formDSLTC.resx">
-      <DependentUpon>formDSLTC.cs</DependentUpon>
->>>>>>> 2c3776185fc7746eca5b2b69f51ec09e3c04b23e
-    </EmbeddedResource>
+    </Compile>
     <Compile Include="Xrpt_BDHM.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -247,7 +239,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHocPhi.resx">
       <DependentUpon>frmHocPhi.cs</DependentUpon>
-     </EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSinhVien.resx">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,7 +283,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Xrpt_PhieuDiem_SV.resx">
       <DependentUpon>Xrpt_PhieuDiem_SV.cs</DependentUpon>
- </EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="XrptInHocPhi.resx">
       <DependentUpon>XrptInHocPhi.cs</DependentUpon>
     </EmbeddedResource>

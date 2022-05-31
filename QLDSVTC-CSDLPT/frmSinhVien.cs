@@ -21,23 +21,13 @@ namespace QLDSVTC_CSDLPT
         public frmSinhVien()
         {
             InitializeComponent();
-            panelControl1.Enabled = false;
         }
 
         
 
         private void frmSinhVien_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qLDSV_TC.DANGKY' table. You can move, or remove it, as needed.
-            //this.dANGKYTableAdapter.Fill(this.qLDSV_TC.DANGKY);
-            // TODO: This line of code loads data into the 'qLDSV_TC.DANGKY' table. You can move, or remove it, as needed.
-            //this.dANGKYTableAdapter.Fill(this.qLDSV_TC.DANGKY);
-            // TODO: This line of code loads data into the 'qLDSV_TC.SINHVIEN' table. You can move, or remove it, as needed.
-            //this.sINHVIENTableAdapter.Fill(this.qLDSV_TC.SINHVIEN);
-            // TODO: This line of code loads data into the 'qLDSV_TC.LOP' table. You can move, or remove it, as needed.
-           // this.lOPTableAdapter.Fill(this.qLDSV_TC.LOP);
-            // TODO: This line of code loads data into the 'qLDSV_TC.KHOA' table. You can move, or remove it, as needed.
-
+            
             qLDSV_TC.EnforceConstraints = false;
 
             this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
@@ -305,27 +295,37 @@ namespace QLDSVTC_CSDLPT
             Program.servername = cobKhoa.SelectedValue.ToString();
             if (cobKhoa.SelectedIndex != Program.mKhoa)
             {
-                Program.mlogin = Program.remotelogin;
+                Program.login = Program.remotelogin;
                 Program.password = Program.remotepassword;
             }
-
+            else
+            {
+                Program.login = Program.mLogin;
+                Program.password = Program.mPassword;
+            }
             if (Program.KetNoi() == 0)
             {
                 MessageBox.Show("Lỗi kết nối về chi nhánh mới", "", MessageBoxButtons.OK);
             }
             else
             {
-                this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.sINHVIENTableAdapter.Fill(this.qLDSV_TC.SINHVIEN);
+                try
+                {
+                    this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.sINHVIENTableAdapter.Fill(this.qLDSV_TC.SINHVIEN);
 
-                this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.lOPTableAdapter.Fill(this.qLDSV_TC.LOP);
+                    this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.lOPTableAdapter.Fill(this.qLDSV_TC.LOP);
 
-                this.dANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.dANGKYTableAdapter.Fill(this.qLDSV_TC.DANGKY);
+                    this.dANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.dANGKYTableAdapter.Fill(this.qLDSV_TC.DANGKY);
 
 
-                macn = ((DataRowView)bdsLop[0])["MAKHOA"].ToString();
+                    macn = ((DataRowView)bdsLop[0])["MAKHOA"].ToString();
+                }
+                catch(Exception ex) {
+                    MessageBox.Show("Lỗi load dữ liệu từ sever này", "", MessageBoxButtons.OK);
+                }
             }
         }
     }
