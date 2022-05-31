@@ -18,13 +18,14 @@ namespace QLDSVTC_CSDLPT
 
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
-        public static String connstr_publicsher = "Data Source=LAPTOP-7N35DOAE;Initial Catalog=QLDSV_TC;Integrated Security=True";
+        public static String connstr_publicsher = "Data Source=LAPTOP-9AGN7PH3;Initial Catalog=QLDSV_TC;Integrated Security=True";
         public static SqlDataAdapter da;
         public static SqlDataReader myReader;
         public static String servername = "";
         public static String servername1 = "THU-PC\\TINTIN";
         public static String servername2 = "THU-PC\\SUSU";
         public static String username = "";
+        public static String mlogin = "";
         public static String password = "";
 
         public static String database = "QLDSV_TC";

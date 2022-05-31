@@ -135,5 +135,29 @@ namespace QLDSVTC_CSDLPT
                 f.Show();
             }
         }
+
+        private void InDSLTCbarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(Frpt_DSLTC));
+            if (frm != null) frm.Activate();
+            else
+            {
+                Frpt_DSLTC f = new Frpt_DSLTC();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void DSDKbarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(Frpt_DSSVDKLTC));
+            if (frm != null) frm.Activate();
+            else
+            {
+                Frpt_DSSVDKLTC f = new Frpt_DSSVDKLTC();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
     }
 }

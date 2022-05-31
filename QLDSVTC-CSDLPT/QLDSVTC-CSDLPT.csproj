@@ -75,11 +75,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="formDSLTC.cs">
+    <Compile Include="Frpt_DSLTC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formDSLTC.Designer.cs">
-      <DependentUpon>formDSLTC.cs</DependentUpon>
+    <Compile Include="Frpt_DSLTC.Designer.cs">
+      <DependentUpon>Frpt_DSLTC.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
@@ -92,6 +92,12 @@
     </Compile>
     <Compile Include="frmDiem.Designer.cs">
       <DependentUpon>frmDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frpt_DSSVDKLTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frpt_DSSVDKLTC.Designer.cs">
+      <DependentUpon>Frpt_DSSVDKLTC.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLopHoc.cs">
       <SubType>Form</SubType>
@@ -142,14 +148,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDSV_TC.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="formDSLTC.resx">
-      <DependentUpon>formDSLTC.cs</DependentUpon>
+    <EmbeddedResource Include="Frpt_DSLTC.resx">
+      <DependentUpon>Frpt_DSLTC.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Xrpt_BDHM.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Xrpt_BDHM.Designer.cs">
       <DependentUpon>Xrpt_BDHM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xrpt_DSLTC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Xrpt_DSLTC.Designer.cs">
+      <DependentUpon>Xrpt_DSLTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xrpt_DSSVDKLTC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Xrpt_DSSVDKLTC.Designer.cs">
+      <DependentUpon>Xrpt_DSSVDKLTC.cs</DependentUpon>
     </Compile>
     <Compile Include="Xrpt_PhieuDiem_SV.cs">
       <SubType>Component</SubType>
@@ -162,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDiem.resx">
       <DependentUpon>frmDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frpt_DSSVDKLTC.resx">
+      <DependentUpon>Frpt_DSSVDKLTC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLopHoc.resx">
       <DependentUpon>frmLopHoc.cs</DependentUpon>
@@ -197,6 +218,12 @@
     </Compile>
     <EmbeddedResource Include="Xrpt_BDHM.resx">
       <DependentUpon>Xrpt_BDHM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xrpt_DSLTC.resx">
+      <DependentUpon>Xrpt_DSLTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xrpt_DSSVDKLTC.resx">
+      <DependentUpon>Xrpt_DSSVDKLTC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Xrpt_PhieuDiem_SV.resx">
       <DependentUpon>Xrpt_PhieuDiem_SV.cs</DependentUpon>
