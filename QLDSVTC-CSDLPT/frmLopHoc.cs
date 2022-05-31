@@ -204,7 +204,7 @@ namespace QLDSVTC_CSDLPT
         {
             vitri = bdsLop.Position;
             _flagOptionLop = "ADD";
-
+            tedMalop.Enabled = true;
             panelControl1.Enabled = true;
             bdsLop.AddNew();
             tedmakhoa.Text = macn;

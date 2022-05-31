@@ -100,20 +100,48 @@ namespace QLDSVTC_CSDLPT
             Program.mLogin = Program.login;
             Program.mPassword = Program.password;
 
-            string strLenh = "EXEC dbo.SP_Lay_Thong_Tin_GV_Tu_Login '" + Program.login + "'";
-            Program.myReader = Program.ExecSqlDataReader(strLenh);
-            if (Program.myReader == null) return;
-            Program.myReader.Read(); // Đọc 1 dòng nếu dữ liệu có nhiều dùng thì dùng for lặp nếu null thì break
-            Program.mGroup = Program.myReader.GetString(2);
+            
 
             if (isSinhVien == false)
             {
+                string strLenh = "EXEC dbo.SP_Lay_Thong_Tin_GV_Tu_Login '" + Program.login + "'";
+                Program.myReader = Program.ExecSqlDataReader(strLenh);
+                if (Program.myReader == null) return;
+                Program.myReader.Read(); // Đọc 1 dòng nếu dữ liệu có nhiều dùng thì dùng for lặp nếu null thì break
+                Program.mGroup = Program.myReader.GetString(2);
                 Program.mHoten = Program.myReader.GetString(1);
                 Program.username = Program.myReader.GetString(0);
+                Program.myReader.Close();
             }
-            Program.myReader.Close();
+            else
+            {
+                string strlenh1 = "EXEC [dbo].[SP_LayThongTinSV_DangNhap] '" + txbTaiKhoan.Text + "', '" + txbMatKhau.Text + "'";
+                SqlDataReader reader = Program.ExecSqlDataReader(strlenh1);
 
-            string strlenh1 = "EXEC [dbo].[SP_LayThongTinSV_DangNhap] '" + txbTaiKhoan.Text + "', '" + txbMatKhau.Text + "'";
+                if (reader.HasRows == false && isSinhVien == true)
+                {
+                    MessageBox.Show("Đăng nhập thất bại! \nMã sinh viên không tồn tại");
+                    return;
+                }
+
+                reader.Read();
+
+                if (Convert.IsDBNull(Program.username))
+                {
+                    MessageBox.Show("Login bạn nhập không có quyền truy cập dữ liệu\n Bạn xem lại username, password", "", MessageBoxButtons.OK);
+                    return;
+                }
+                try
+                {
+                    Program.mHoten = reader.GetString(1);
+                    Program.username = reader.GetString(0);
+                    Program.mGroup = "SV";
+                }
+                catch (Exception) { }
+
+                reader.Close();
+            }
+            /*string strlenh1 = "EXEC [dbo].[SP_LayThongTinSV_DangNhap] '" + txbTaiKhoan.Text + "', '" + txbMatKhau.Text + "'";
             SqlDataReader reader = Program.ExecSqlDataReader(strlenh1);
 
             if (reader.HasRows == false && isSinhVien == true)
@@ -128,19 +156,20 @@ namespace QLDSVTC_CSDLPT
             {
                 MessageBox.Show("Login bạn nhập không có quyền truy cập dữ liệu\n Bạn xem lại username, password", "", MessageBoxButtons.OK);
                 return;
-            }
+            }*/
 
-            if (isSinhVien == true)
+            /*if (isSinhVien == true)
             {
                 try
                 {
                     Program.mHoten = reader.GetString(1);
                     Program.username = reader.GetString(0);
+                    Program.mGroup = "SV";
                 }
                 catch (Exception) { }
-            }
+            }*/
             Program.conn.Close();
-            reader.Close();
+            /*reader.Close();*/
             // MessageBox.Show("Đăng nhập thành công !!!");
             //Form f = new frmMain();
             //f.ShowDialog();

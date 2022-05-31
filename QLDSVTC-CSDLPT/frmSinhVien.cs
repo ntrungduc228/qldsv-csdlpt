@@ -180,7 +180,7 @@ namespace QLDSVTC_CSDLPT
         {
             vitri = bdsSinhvien.Position;
             _flagOptionSinhVien = "ADD";
-
+            tedMasv.Enabled = true;
             panelControl1.Enabled = true;
             bdsSinhvien.AddNew();
             tedMalop.Text = ((DataRowView)bdsLop[bdsLop.Position])["MALOP"].ToString();

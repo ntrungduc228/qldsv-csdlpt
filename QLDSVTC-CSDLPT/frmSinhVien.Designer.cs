@@ -37,8 +37,8 @@ namespace QLDSVTC_CSDLPT
             System.Windows.Forms.Label nGAYSINHLabel;
             System.Windows.Forms.Label mALOPLabel;
             System.Windows.Forms.Label dANGHIHOCLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSinhVien));
             System.Windows.Forms.Label mASVLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSinhVien));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.bar2 = new DevExpress.XtraBars.Bar();
@@ -92,6 +92,7 @@ namespace QLDSVTC_CSDLPT
             this.bdsDangky = new System.Windows.Forms.BindingSource(this.components);
             this.dANGKYTableAdapter = new QLDSVTC_CSDLPT.QLDSV_TCTableAdapters.DANGKYTableAdapter();
             this.tedMasv = new DevExpress.XtraEditors.TextEdit();
+            this.fKCTLTCSINHVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
             hOLabel = new System.Windows.Forms.Label();
             tENLabel = new System.Windows.Forms.Label();
             pHAILabel = new System.Windows.Forms.Label();
@@ -122,6 +123,7 @@ namespace QLDSVTC_CSDLPT
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsDangky)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tedMasv.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKCTLTCSINHVIENBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // hOLabel
@@ -186,6 +188,15 @@ namespace QLDSVTC_CSDLPT
             dANGHIHOCLabel.Size = new System.Drawing.Size(104, 17);
             dANGHIHOCLabel.TabIndex = 22;
             dANGHIHOCLabel.Text = "DANGHIHOC:";
+            // 
+            // mASVLabel
+            // 
+            mASVLabel.AutoSize = true;
+            mASVLabel.Location = new System.Drawing.Point(276, 379);
+            mASVLabel.Name = "mASVLabel";
+            mASVLabel.Size = new System.Drawing.Size(54, 17);
+            mASVLabel.TabIndex = 33;
+            mASVLabel.Text = "MASV:";
             // 
             // barManager1
             // 
@@ -733,20 +744,11 @@ namespace QLDSVTC_CSDLPT
             // 
             // bdsDangky
             // 
-            this.bdsDangky.DataSource = this.bdsSinhvien;
+            this.bdsDangky.DataSource = this.fKCTLTCSINHVIENBindingSource;
             // 
             // dANGKYTableAdapter
             // 
             this.dANGKYTableAdapter.ClearBeforeFill = true;
-            // 
-            // mASVLabel
-            // 
-            mASVLabel.AutoSize = true;
-            mASVLabel.Location = new System.Drawing.Point(276, 379);
-            mASVLabel.Name = "mASVLabel";
-            mASVLabel.Size = new System.Drawing.Size(54, 17);
-            mASVLabel.TabIndex = 33;
-            mASVLabel.Text = "MASV:";
             // 
             // tedMasv
             // 
@@ -756,6 +758,11 @@ namespace QLDSVTC_CSDLPT
             this.tedMasv.Name = "tedMasv";
             this.tedMasv.Size = new System.Drawing.Size(173, 22);
             this.tedMasv.TabIndex = 34;
+            // 
+            // fKCTLTCSINHVIENBindingSource
+            // 
+            this.fKCTLTCSINHVIENBindingSource.DataMember = "FK_CTLTC_SINHVIEN";
+            this.fKCTLTCSINHVIENBindingSource.DataSource = this.bdsSinhvien;
             // 
             // frmSinhVien
             // 
@@ -817,6 +824,7 @@ namespace QLDSVTC_CSDLPT
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsDangky)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tedMasv.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKCTLTCSINHVIENBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -877,5 +885,6 @@ namespace QLDSVTC_CSDLPT
         private System.Windows.Forms.ComboBox cobKhoa;
         private System.Windows.Forms.Label labKhoa;
         private DevExpress.XtraEditors.TextEdit tedMasv;
+        private System.Windows.Forms.BindingSource fKCTLTCSINHVIENBindingSource;
     }
 }
