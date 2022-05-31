@@ -25,6 +25,7 @@ namespace QLDSVTC_CSDLPT
         public static String servername1 = "THU-PC\\TINTIN";
         public static String servername2 = "THU-PC\\SUSU";
         public static String username = "";
+        public static String mlogin = "";
         public static String password = "";
         public static String login = "";
 

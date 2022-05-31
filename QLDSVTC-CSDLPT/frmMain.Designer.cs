@@ -173,6 +173,7 @@ namespace QLDSVTC_CSDLPT
             this.InDSLTCbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("InDSLTCbarButton.ImageOptions.Image")));
             this.InDSLTCbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("InDSLTCbarButton.ImageOptions.LargeImage")));
             this.InDSLTCbarButton.Name = "InDSLTCbarButton";
+            this.InDSLTCbarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.InDSLTCbarButton_ItemClick);
             // 
             // DSDKbarButton
             // 
@@ -181,6 +182,7 @@ namespace QLDSVTC_CSDLPT
             this.DSDKbarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("DSDKbarButton.ImageOptions.Image")));
             this.DSDKbarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("DSDKbarButton.ImageOptions.LargeImage")));
             this.DSDKbarButton.Name = "DSDKbarButton";
+            this.DSDKbarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.DSDKbarButton_ItemClick);
             // 
             // BDHMbarButton
             // 

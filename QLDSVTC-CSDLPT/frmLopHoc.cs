@@ -334,7 +334,7 @@ namespace QLDSVTC_CSDLPT
             Program.servername = cobKhoa.SelectedValue.ToString();
             if (cobKhoa.SelectedIndex != Program.mKhoa)
             {
-                Program.mLogin = Program.remotelogin;
+                Program.mlogin = Program.remotelogin;
                 Program.password = Program.remotepassword;
             }
             
