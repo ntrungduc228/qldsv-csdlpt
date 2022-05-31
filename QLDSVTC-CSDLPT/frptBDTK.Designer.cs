@@ -73,6 +73,7 @@ namespace QLDSVTC_CSDLPT
             this.btnThoat.TabIndex = 6;
             this.btnThoat.Text = "THOÁT";
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnIn
             // 
@@ -124,6 +125,7 @@ namespace QLDSVTC_CSDLPT
             this.Name = "frptBDTK";
             this.Text = "Bảng điểm cuối khóa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frptBDTK_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

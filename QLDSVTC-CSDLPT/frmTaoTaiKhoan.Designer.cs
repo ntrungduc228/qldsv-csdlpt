@@ -85,6 +85,7 @@ namespace QLDSVTC_CSDLPT
             this.btnHuy.TabIndex = 5;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnDangKy
             // 
@@ -96,6 +97,7 @@ namespace QLDSVTC_CSDLPT
             this.btnDangKy.TabIndex = 5;
             this.btnDangKy.Text = "Đăng ký";
             this.btnDangKy.UseVisualStyleBackColor = false;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
             // panel2
             // 
@@ -251,6 +253,7 @@ namespace QLDSVTC_CSDLPT
             this.Name = "frmTaoTaiKhoan";
             this.Text = "Tạo tài khoản";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmTaoTaiKhoan_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

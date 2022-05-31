@@ -17,5 +17,15 @@ namespace QLDSVTC_CSDLPT
         {
             InitializeComponent();
         }
+
+        private void panelControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
     }
 }

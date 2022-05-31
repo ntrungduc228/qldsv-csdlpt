@@ -146,13 +146,9 @@ namespace QLDSVTC_CSDLPT
 
         private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
         {
-            foreach (Form f in this.MdiChildren)
-            {
-                f.Close();
-            }
-            Form frmDangNhap = new frmDangNhap();
+            Program.mainForm.Close();
+            Program.dangNhapForm.Visible = true;
 
-            this.Close();
         }
         private void phieuDiembarButton_ItemClick(object sender, ItemClickEventArgs e)
         {

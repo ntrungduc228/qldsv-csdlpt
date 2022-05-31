@@ -116,6 +116,7 @@ namespace QLDSVTC_CSDLPT
             // 
             this.bar3.BarName = "Tools";
             this.bar3.DockCol = 0;
+            this.bar3.DockRow = 1;
             this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar3.Text = "Tools";
             // 
@@ -123,6 +124,7 @@ namespace QLDSVTC_CSDLPT
             // 
             this.bar4.BarName = "Main menu";
             this.bar4.DockCol = 0;
+            this.bar4.DockRow = 0;
             this.bar4.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar4.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnXoa, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
@@ -139,6 +141,7 @@ namespace QLDSVTC_CSDLPT
             this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
             this.btnXoa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.LargeImage")));
             this.btnXoa.Name = "btnXoa";
+            this.btnXoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoa_ItemClick);
             // 
             // btnLamMoi
             // 
@@ -205,10 +208,11 @@ namespace QLDSVTC_CSDLPT
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 51);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1263, 52);
             this.panelControl1.TabIndex = 5;
+            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             // 
             // label1
             // 
@@ -233,7 +237,7 @@ namespace QLDSVTC_CSDLPT
             this.panelControl2.Controls.Add(this.label2);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 103);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1263, 115);
             this.panelControl2.TabIndex = 6;
@@ -242,7 +246,7 @@ namespace QLDSVTC_CSDLPT
             // 
             this.cbHocKi.FormattingEnabled = true;
             this.cbHocKi.Location = new System.Drawing.Point(990, 72);
-            this.cbHocKi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbHocKi.Margin = new System.Windows.Forms.Padding(4);
             this.cbHocKi.Name = "cbHocKi";
             this.cbHocKi.Size = new System.Drawing.Size(278, 24);
             this.cbHocKi.TabIndex = 6;
@@ -251,7 +255,7 @@ namespace QLDSVTC_CSDLPT
             // 
             this.cbNienKhoa.FormattingEnabled = true;
             this.cbNienKhoa.Location = new System.Drawing.Point(990, 26);
-            this.cbNienKhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbNienKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.cbNienKhoa.Name = "cbNienKhoa";
             this.cbNienKhoa.Size = new System.Drawing.Size(278, 24);
             this.cbNienKhoa.TabIndex = 5;
@@ -269,7 +273,7 @@ namespace QLDSVTC_CSDLPT
             // btnSearchLopTinChi
             // 
             this.btnSearchLopTinChi.Location = new System.Drawing.Point(1299, 21);
-            this.btnSearchLopTinChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearchLopTinChi.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchLopTinChi.Name = "btnSearchLopTinChi";
             this.btnSearchLopTinChi.Size = new System.Drawing.Size(118, 78);
             this.btnSearchLopTinChi.TabIndex = 2;
@@ -278,7 +282,7 @@ namespace QLDSVTC_CSDLPT
             // btnSearchSinhVien
             // 
             this.btnSearchSinhVien.Location = new System.Drawing.Point(538, 21);
-            this.btnSearchSinhVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearchSinhVien.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchSinhVien.Name = "btnSearchSinhVien";
             this.btnSearchSinhVien.Size = new System.Drawing.Size(118, 29);
             this.btnSearchSinhVien.TabIndex = 2;
@@ -297,7 +301,7 @@ namespace QLDSVTC_CSDLPT
             // txbMaSV
             // 
             this.txbMaSV.Location = new System.Drawing.Point(234, 21);
-            this.txbMaSV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbMaSV.Margin = new System.Windows.Forms.Padding(4);
             this.txbMaSV.Name = "txbMaSV";
             this.txbMaSV.Size = new System.Drawing.Size(278, 23);
             this.txbMaSV.TabIndex = 1;
