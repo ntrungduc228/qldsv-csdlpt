@@ -115,7 +115,10 @@ namespace QLDSVTC_CSDLPT
         private void cbnienkhoa_SelectedIndexChanged(object sender, EventArgs e)
         {
             loadcbhocky(cbnienkhoa.Text);
-            cbhocky.SelectedIndex = 0;
+            try
+            {
+                cbhocky.SelectedIndex = 0;
+            } catch { }
         }
 
         private void cbhocky_SelectedIndexChanged(object sender, EventArgs e)
