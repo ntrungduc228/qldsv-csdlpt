@@ -70,16 +70,16 @@ namespace QLDSVTC_CSDLPT
             this.panel1.Controls.Add(this.txbTenLogin);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(426, 84);
+            this.panel1.Location = new System.Drawing.Point(275, 84);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(411, 530);
+            this.panel1.Size = new System.Drawing.Size(562, 333);
             this.panel1.TabIndex = 1;
             // 
             // btnHuy
             // 
             this.btnHuy.BackColor = System.Drawing.Color.LightCoral;
             this.btnHuy.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(222, 462);
+            this.btnHuy.Location = new System.Drawing.Point(374, 263);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(155, 48);
             this.btnHuy.TabIndex = 5;
@@ -91,7 +91,7 @@ namespace QLDSVTC_CSDLPT
             // 
             this.btnDangKy.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnDangKy.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangKy.Location = new System.Drawing.Point(45, 462);
+            this.btnDangKy.Location = new System.Drawing.Point(197, 263);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(155, 48);
             this.btnDangKy.TabIndex = 5;
@@ -105,7 +105,7 @@ namespace QLDSVTC_CSDLPT
             this.panel2.Controls.Add(this.rdoPKT);
             this.panel2.Controls.Add(this.rdoKhoa);
             this.panel2.Controls.Add(this.rdoPGV);
-            this.panel2.Location = new System.Drawing.Point(147, 380);
+            this.panel2.Location = new System.Drawing.Point(299, 181);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(224, 57);
             this.panel2.TabIndex = 4;
@@ -147,14 +147,14 @@ namespace QLDSVTC_CSDLPT
             // 
             this.cbGiangVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGiangVien.FormattingEnabled = true;
-            this.cbGiangVien.Location = new System.Drawing.Point(147, 338);
+            this.cbGiangVien.Location = new System.Drawing.Point(299, 139);
             this.cbGiangVien.Name = "cbGiangVien";
             this.cbGiangVien.Size = new System.Drawing.Size(224, 24);
             this.cbGiangVien.TabIndex = 3;
             // 
             // txbXacNhanMK
             // 
-            this.txbXacNhanMK.Location = new System.Drawing.Point(147, 298);
+            this.txbXacNhanMK.Location = new System.Drawing.Point(299, 99);
             this.txbXacNhanMK.Name = "txbXacNhanMK";
             this.txbXacNhanMK.Size = new System.Drawing.Size(224, 23);
             this.txbXacNhanMK.TabIndex = 2;
@@ -164,7 +164,7 @@ namespace QLDSVTC_CSDLPT
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(67, 400);
+            this.label6.Location = new System.Drawing.Point(219, 201);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 18);
             this.label6.TabIndex = 1;
@@ -174,7 +174,7 @@ namespace QLDSVTC_CSDLPT
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(42, 341);
+            this.label4.Location = new System.Drawing.Point(194, 142);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 18);
             this.label4.TabIndex = 1;
@@ -184,7 +184,7 @@ namespace QLDSVTC_CSDLPT
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(42, 301);
+            this.label5.Location = new System.Drawing.Point(194, 102);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 18);
             this.label5.TabIndex = 1;
@@ -193,7 +193,7 @@ namespace QLDSVTC_CSDLPT
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(42, 304);
+            this.label3.Location = new System.Drawing.Point(194, 105);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 17);
             this.label3.TabIndex = 1;
@@ -201,7 +201,7 @@ namespace QLDSVTC_CSDLPT
             // 
             // txbMatKhau
             // 
-            this.txbMatKhau.Location = new System.Drawing.Point(147, 261);
+            this.txbMatKhau.Location = new System.Drawing.Point(299, 62);
             this.txbMatKhau.Name = "txbMatKhau";
             this.txbMatKhau.Size = new System.Drawing.Size(224, 23);
             this.txbMatKhau.TabIndex = 2;
@@ -211,7 +211,7 @@ namespace QLDSVTC_CSDLPT
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(42, 264);
+            this.label2.Location = new System.Drawing.Point(194, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 18);
             this.label2.TabIndex = 1;
@@ -219,7 +219,7 @@ namespace QLDSVTC_CSDLPT
             // 
             // txbTenLogin
             // 
-            this.txbTenLogin.Location = new System.Drawing.Point(147, 224);
+            this.txbTenLogin.Location = new System.Drawing.Point(299, 25);
             this.txbTenLogin.Name = "txbTenLogin";
             this.txbTenLogin.Size = new System.Drawing.Size(224, 23);
             this.txbTenLogin.TabIndex = 2;
@@ -228,7 +228,7 @@ namespace QLDSVTC_CSDLPT
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(42, 227);
+            this.label1.Location = new System.Drawing.Point(194, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 18);
             this.label1.TabIndex = 1;
@@ -237,7 +237,7 @@ namespace QLDSVTC_CSDLPT
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(133, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(20, 25);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(153, 162);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

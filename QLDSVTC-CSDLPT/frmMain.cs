@@ -130,6 +130,8 @@ namespace QLDSVTC_CSDLPT
             else
             {
                 frmHocPhi f = new frmHocPhi();
+                f.MdiParent = this;
+                f.Show();
             }
         }
         private void BDHMbarButton_ItemClick(object sender, ItemClickEventArgs e)

@@ -97,8 +97,6 @@ namespace QLDSVTC_CSDLPT
             }
 
 
-            
-
             Program.mKhoa = cbChiNhanh.SelectedIndex;
             string strLenh = "EXEC dbo.SP_Lay_Thong_Tin_GV_Tu_Login '" + Program.mLogin + "'";
             Program.myReader = Program.ExecSqlDataReader(strLenh);
@@ -115,38 +113,39 @@ namespace QLDSVTC_CSDLPT
             }
 
             Program.myReader.Close();
-            string strlenh1 = "EXEC [dbo].[SP_LayThongTinSV_DangNhap] '" + txbTaiKhoan.Text + "', '" + txbMatKhau.Text + "'";
-            SqlDataReader reader = Program.ExecSqlDataReader(strlenh1);
+            /* string strlenh1 = "EXEC [dbo].[SP_LayThongTinSV_DangNhap] '" + txbTaiKhoan.Text + "', '" + txbMatKhau.Text + "'";
+             SqlDataReader reader = Program.ExecSqlDataReader(strlenh1);
 
-            if (reader.HasRows == false && isSinhVien == true)
-            {
-                MessageBox.Show("Đăng nhập thất bại! \nMã sinh viên không tồn tại");
-                return;
-            }
+             if (reader.HasRows == false && isSinhVien == true)
+             {
+                 MessageBox.Show("Đăng nhập thất bại! \nMã sinh viên không tồn tại");
+                 return;
+             }
 
-            reader.Read();
+             reader.Read();
 
-            if (Convert.IsDBNull(Program.username))
-            {
-                MessageBox.Show("Login bạn nhập không có quyền truy cập dữ liệu\n Bạn xem lại username, password", "", MessageBoxButtons.OK);
-                return;
-            }
+             if (Convert.IsDBNull(Program.username))
+             {
+                 MessageBox.Show("Login bạn nhập không có quyền truy cập dữ liệu\n Bạn xem lại username, password", "", MessageBoxButtons.OK);
+                 return;
+             }
 
-            if (isSinhVien == true)
-            {
-                try
-                {
-                    Program.mHoten = reader.GetString(1);
-                    Program.username = reader.GetString(0);
-                }
-                catch (Exception) { }
-            }
-            Program.conn.Close();
-            reader.Close();
+             if (isSinhVien == true)
+             {
+                 try
+                 {
+                     Program.mHoten = reader.GetString(1);
+                     Program.username = reader.GetString(0);
+                 }
+                 catch (Exception) { }
+             }
+             Program.conn.Close();
+             reader.Close();*/
             // MessageBox.Show("Đăng nhập thành công !!!");
             //Form f = new frmMain();
             //f.ShowDialog();
             // truy cập vào frm main 
+            Program.conn.Close();
             Program.mainForm = new frmMain();
 
             // hiện thông tin tài khoản

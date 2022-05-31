@@ -40,6 +40,9 @@ namespace QLDSVTC_CSDLPT
             this.btnHuy = new DevExpress.XtraBars.BarButtonItem();
             this.btnLamMoi = new DevExpress.XtraBars.BarButtonItem();
             this.btnThoat = new DevExpress.XtraBars.BarButtonItem();
+            this.themCTHPBarbutton = new DevExpress.XtraBars.BarButtonItem();
+            this.ghiCTHPBtn = new DevExpress.XtraBars.BarButtonItem();
+            this.PHCTHPBtn = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -66,6 +69,11 @@ namespace QLDSVTC_CSDLPT
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.thêmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ghiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phụcHồiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -74,6 +82,8 @@ namespace QLDSVTC_CSDLPT
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CT_HOCPHIGRIDCONTROL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // barManager1
@@ -93,9 +103,12 @@ namespace QLDSVTC_CSDLPT
             this.btnPhucHoi,
             this.btnHuy,
             this.btnLamMoi,
-            this.btnThoat});
+            this.btnThoat,
+            this.themCTHPBarbutton,
+            this.ghiCTHPBtn,
+            this.PHCTHPBtn});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 6;
+            this.barManager1.MaxItemId = 9;
             this.barManager1.StatusBar = this.bar3;
             // 
             // bar1
@@ -137,6 +150,7 @@ namespace QLDSVTC_CSDLPT
             this.btnGhi.Id = 1;
             this.btnGhi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnGhi.ImageOptions.SvgImage")));
             this.btnGhi.Name = "btnGhi";
+            this.btnGhi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGhi_ItemClick);
             // 
             // btnPhucHoi
             // 
@@ -144,6 +158,7 @@ namespace QLDSVTC_CSDLPT
             this.btnPhucHoi.Id = 2;
             this.btnPhucHoi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPhucHoi.ImageOptions.SvgImage")));
             this.btnPhucHoi.Name = "btnPhucHoi";
+            this.btnPhucHoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhucHoi_ItemClick);
             // 
             // btnHuy
             // 
@@ -151,6 +166,7 @@ namespace QLDSVTC_CSDLPT
             this.btnHuy.Id = 3;
             this.btnHuy.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnHuy.ImageOptions.SvgImage")));
             this.btnHuy.Name = "btnHuy";
+            this.btnHuy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHuy_ItemClick);
             // 
             // btnLamMoi
             // 
@@ -158,6 +174,7 @@ namespace QLDSVTC_CSDLPT
             this.btnLamMoi.Id = 4;
             this.btnLamMoi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLamMoi.ImageOptions.SvgImage")));
             this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLamMoi_ItemClick);
             // 
             // btnThoat
             // 
@@ -166,6 +183,27 @@ namespace QLDSVTC_CSDLPT
             this.btnThoat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnThoat.ImageOptions.SvgImage")));
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick);
+            // 
+            // themCTHPBarbutton
+            // 
+            this.themCTHPBarbutton.Caption = "Thêm CTHP";
+            this.themCTHPBarbutton.Id = 6;
+            this.themCTHPBarbutton.Name = "themCTHPBarbutton";
+            this.themCTHPBarbutton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.themCTHPBarbutton_ItemClick);
+            // 
+            // ghiCTHPBtn
+            // 
+            this.ghiCTHPBtn.Caption = "Ghi CTHP";
+            this.ghiCTHPBtn.Id = 7;
+            this.ghiCTHPBtn.Name = "ghiCTHPBtn";
+            this.ghiCTHPBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ghiCTHPBtn_ItemClick);
+            // 
+            // PHCTHPBtn
+            // 
+            this.PHCTHPBtn.Caption = "ph CTHP";
+            this.PHCTHPBtn.Id = 8;
+            this.PHCTHPBtn.Name = "PHCTHPBtn";
+            this.PHCTHPBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.PHCTHPBtn_ItemClick);
             // 
             // bar3
             // 
@@ -318,7 +356,6 @@ namespace QLDSVTC_CSDLPT
             this.HOCPHIGRIDCONTROL.TabIndex = 10;
             this.HOCPHIGRIDCONTROL.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.HOCPHIGRIDCONTROL.Click += new System.EventHandler(this.HOCPHIGRIDCONTROL_Click);
             this.HOCPHIGRIDCONTROL.MouseClick += new System.Windows.Forms.MouseEventHandler(this.HOCPHIGRIDCONTROL_MouseClick);
             // 
             // gridView1
@@ -332,6 +369,7 @@ namespace QLDSVTC_CSDLPT
             this.gridView1.GridControl = this.HOCPHIGRIDCONTROL;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView1.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridView1_RowCellStyle);
             // 
             // gridColumn1
             // 
@@ -350,6 +388,7 @@ namespace QLDSVTC_CSDLPT
             this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn2.Caption = "Học kỳ";
+            this.gridColumn2.FieldName = "HOCKY";
             this.gridColumn2.MinWidth = 25;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
@@ -361,6 +400,7 @@ namespace QLDSVTC_CSDLPT
             this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn3.Caption = "Học phí";
+            this.gridColumn3.FieldName = "HOCPHI";
             this.gridColumn3.MinWidth = 25;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
@@ -372,6 +412,7 @@ namespace QLDSVTC_CSDLPT
             this.gridColumn4.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn4.Caption = "Số tiền đã đóng";
+            this.gridColumn4.FieldName = "TONGSOTIENDADONG";
             this.gridColumn4.MinWidth = 25;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
@@ -383,6 +424,7 @@ namespace QLDSVTC_CSDLPT
             this.gridColumn5.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn5.Caption = "Số tiền cần đóng";
+            this.gridColumn5.FieldName = "SOTIENCANDONG";
             this.gridColumn5.MinWidth = 25;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
@@ -408,6 +450,7 @@ namespace QLDSVTC_CSDLPT
             this.gridColumn7});
             this.gridView2.GridControl = this.CT_HOCPHIGRIDCONTROL;
             this.gridView2.Name = "gridView2";
+            this.gridView2.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridView2_RowCellStyle);
             // 
             // gridColumn6
             // 
@@ -425,17 +468,50 @@ namespace QLDSVTC_CSDLPT
             this.gridColumn7.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.gridColumn7.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn7.Caption = "số tiền đóng";
+            this.gridColumn7.FieldName = "SOTIENDONG";
             this.gridColumn7.MinWidth = 25;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 1;
             this.gridColumn7.Width = 94;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thêmToolStripMenuItem,
+            this.ghiToolStripMenuItem,
+            this.phụcHồiToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(135, 76);
+            // 
+            // thêmToolStripMenuItem
+            // 
+            this.thêmToolStripMenuItem.Name = "thêmToolStripMenuItem";
+            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.thêmToolStripMenuItem.Text = "Thêm";
+            this.thêmToolStripMenuItem.Click += new System.EventHandler(this.thêmToolStripMenuItem_Click);
+            // 
+            // ghiToolStripMenuItem
+            // 
+            this.ghiToolStripMenuItem.Name = "ghiToolStripMenuItem";
+            this.ghiToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.ghiToolStripMenuItem.Text = "Ghi";
+            this.ghiToolStripMenuItem.Click += new System.EventHandler(this.ghiToolStripMenuItem_Click);
+            // 
+            // phụcHồiToolStripMenuItem
+            // 
+            this.phụcHồiToolStripMenuItem.Name = "phụcHồiToolStripMenuItem";
+            this.phụcHồiToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.phụcHồiToolStripMenuItem.Text = "Phục hồi";
+            this.phụcHồiToolStripMenuItem.Click += new System.EventHandler(this.phụcHồiToolStripMenuItem_Click);
+            // 
             // frmHocPhi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1054, 610);
+            this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.CT_HOCPHIGRIDCONTROL);
             this.Controls.Add(this.HOCPHIGRIDCONTROL);
             this.Controls.Add(this.panelControl1);
@@ -446,6 +522,7 @@ namespace QLDSVTC_CSDLPT
             this.Controls.Add(this.barDockControlTop);
             this.Name = "frmHocPhi";
             this.Text = "Học phí";
+            this.Load += new System.EventHandler(this.frmHocPhi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -456,6 +533,8 @@ namespace QLDSVTC_CSDLPT
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CT_HOCPHIGRIDCONTROL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -498,5 +577,13 @@ namespace QLDSVTC_CSDLPT
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txbMaSV;
         private System.Windows.Forms.Label label2;
+        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
+        private DevExpress.XtraBars.BarButtonItem themCTHPBarbutton;
+        private DevExpress.XtraBars.BarButtonItem ghiCTHPBtn;
+        private DevExpress.XtraBars.BarButtonItem PHCTHPBtn;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem thêmToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ghiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem phụcHồiToolStripMenuItem;
     }
 }
