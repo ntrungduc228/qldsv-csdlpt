@@ -18,7 +18,7 @@ namespace QLDSVTC_CSDLPT
 
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
-        public static String connstr_publicsher = "Data Source=LAPTOP-7N35DOAE;Initial Catalog=QLDSV_TC;Integrated Security=True";
+        public static String connstr_publicsher = "Data Source=DESKTOP-PN0LV22;Initial Catalog=QLDSV_TC;Integrated Security=True";
         public static SqlDataAdapter da;
         public static SqlDataReader myReader;
         public static String servername = "";

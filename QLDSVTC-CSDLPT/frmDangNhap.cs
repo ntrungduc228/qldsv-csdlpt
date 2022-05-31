@@ -174,6 +174,7 @@ namespace QLDSVTC_CSDLPT
             //Form f = new frmMain();
             //f.ShowDialog();
             // truy cập vào frm main 
+            Program.conn.Close();
             Program.mainForm = new frmMain();
 
             // hiện thông tin tài khoản

@@ -117,7 +117,7 @@ namespace QLDSVTC_CSDLPT
             // 
             // txbMatKhau
             // 
-            this.txbMatKhau.EditValue = "123";
+            this.txbMatKhau.EditValue = "123456";
             this.txbMatKhau.Location = new System.Drawing.Point(144, 173);
             this.txbMatKhau.Name = "txbMatKhau";
             this.txbMatKhau.Properties.UseSystemPasswordChar = true;
@@ -126,8 +126,8 @@ namespace QLDSVTC_CSDLPT
             // 
             // txbTaiKhoan
             // 
-            this.txbTaiKhoan.EditValue = "thu";
-            this.txbTaiKhoan.Location = new System.Drawing.Point(144, 123);
+            this.txbTaiKhoan.EditValue = "GV01";
+            this.txbTaiKhoan.Location = new System.Drawing.Point(144, 121);
             this.txbTaiKhoan.Margin = new System.Windows.Forms.Padding(4);
             this.txbTaiKhoan.Name = "txbTaiKhoan";
             this.txbTaiKhoan.Size = new System.Drawing.Size(284, 22);

@@ -130,6 +130,8 @@ namespace QLDSVTC_CSDLPT
             else
             {
                 frmHocPhi f = new frmHocPhi();
+                f.MdiParent = this;
+                f.Show();
             }
         }
         private void BDHMbarButton_ItemClick(object sender, ItemClickEventArgs e)
@@ -152,6 +154,9 @@ namespace QLDSVTC_CSDLPT
             }
             Program.dangNhapForm.Show();
             this.Close();
+            //Program.mainForm.Close();
+            //Program.dangNhapForm.Visible = true;
+
         }
         private void phieuDiembarButton_ItemClick(object sender, ItemClickEventArgs e)
         {
