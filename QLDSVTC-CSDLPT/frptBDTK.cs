@@ -30,6 +30,14 @@ namespace QLDSVTC_CSDLPT
 
         }
 
-       
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frptBDTK_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

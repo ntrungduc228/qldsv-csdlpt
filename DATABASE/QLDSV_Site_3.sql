@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[SP_TongTienHocPhi] @MALOP varchar(10), @NienKhoa varchar(9), @HocKy int
+﻿CREATE PROCEDURE [dbo].[SP_TongTienHocPhi] @MALOP varchar(10), @NienKhoa varchar(9), @HocKy int
 AS
 
 DECLARE @tonghocphi INT
@@ -31,3 +31,39 @@ select HOTEN=SINHVIEN.HO + ' '+ SINHVIEN.TEN,HOCPHI,SOTIENDONG= COALESCE(SOTIEND
 from SINHVIEN,GETSVDONGTIEN
 where SINHVIEN.MASV = GETSVDONGTIEN.MASV
 AND SINHVIEN.MALOP = @MALOP
+
+
+CREATE PROC [dbo].[SP_GetCTHP_SV]
+@MASV VARCHAR(10), @NIENKHOA NCHAR(9), @HOCKY INT
+AS SELECT NGAYDONG, SOTIENDONG FROM dbo.CT_DONGHOCPHI WHERE NIENKHOA = @NIENKHOA AND HOCKY = @HOCKY AND MASV = @MASV
+
+create proc [dbo].[TAO_THONGTINHOCPHI] @MASV varchar(20),@NienKhoa varchar (20), @HocKy int, @HocPhi int
+as
+if exists (select 1 from HOCPHI where MASV = @MASV AND NIENKHOA = @NienKhoa AND HOCKY = @HocKy)
+	begin
+		raiserror(N'ĐÃ TỒN TẠI THÔNG TIN HỌC PHÍ',16,1)
+	end
+else
+	begin
+		insert into HOCPHI(MASV,NIENKHOA,HOCKY,HOCPHI)
+		values (@MASV,@NienKhoa,@HocKy,@HocPhi)
+		
+	end
+	 
+
+GO
+
+
+CREATE proc [dbo].[SV_DONGTIEN] @MASV varchar(20),@NienKhoa varchar (20), @HocKy int, @SoTienDong int
+as
+
+if exists (select 1 from HOCPHI where MASV = @MASV AND NIENKHOA = @NienKhoa AND HOCKY = @HocKy)
+	begin
+		insert into CT_DONGHOCPHI(MASV,NIENKHOA,HOCKY,SOTIENDONG)
+		values (@MASV,@NienKhoa,@HocKy,@SoTienDong)
+	end
+else
+	raiserror(N'Thông tin bạn nhập không tồn tại',16,1)
+	 
+
+GO
