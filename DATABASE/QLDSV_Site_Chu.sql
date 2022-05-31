@@ -57,3 +57,5 @@ AS
   EXEC sp_addsrvrolemember @LGNAME, 'securityadmin'
 
   RETURN 0  -- THANH CONG
+
+
